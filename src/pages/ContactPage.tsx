@@ -60,9 +60,8 @@ export function ContactPage() {
       });
       setIsSuccess(true);
       toast.success('Inquiry Received', {
-        description: "Your inquiry has been sent directly to Patrick McCullough for personal review.",
+        description: "Your inquiry has been sent directly to me for personal review.",
       });
-      form.reset();
     } catch (error) {
       console.error('Submission error:', error);
       toast.error('Submission Error', {
@@ -71,10 +70,16 @@ export function ContactPage() {
     } finally {
       setIsSubmitting(false);
     }
-  }, [form]);
+  }, []);
   const handleReset = () => {
     setIsSuccess(false);
-    form.reset();
+    form.reset({
+      name: '',
+      email: '',
+      phone: '',
+      service: 'general',
+      message: '',
+    });
   };
   return (
     <div className="bg-brand-cream min-h-[calc(100vh-10rem)] flex flex-col">
