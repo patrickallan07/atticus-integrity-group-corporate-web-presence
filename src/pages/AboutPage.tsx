@@ -30,14 +30,14 @@ export function AboutPage() {
             <div className="space-y-8">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-green">Professional Ethos</h2>
               <p className="text-brand-slate-light leading-relaxed">
-                Atticus Integrity believes that organizational success is inextricably linked to the integrity of its people systems. As an independent firm, we provide objective, high-stakes counsel that larger consultancies often overlook. Our focus is on the intersection of compliance, culture, and commercial reality.
+                Atticus Integrity believes that organizational success is inextricably linked to the integrity of its people systems. As an independent firm, the practice provides objective, high-stakes counsel that larger consultancies often overlook. The focus is on the intersection of compliance, culture, and commercial reality.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { icon: Shield, title: "Independence", text: "Unbiased advisory focused solely on your organization's best interests." },
+                  { icon: Shield, title: "Independence", text: "Unbiased advisory focused solely on the organization's best interests." },
                   { icon: Target, title: "Precision", text: "Tailored strategies that address the root causes of workplace friction." },
                   { icon: Award, title: "Integrity", text: "A commitment to ethical practice in every engagement and interaction." },
-                  { icon: User, title: "Experience", text: "Direct access to senior-level expertise without the traditional firm overhead." }
+                  { icon: User, title: "Experience", text: "Direct access to senior-level expertise without traditional firm overhead." }
                 ].map((item, idx) => (
                   <div key={idx} className="space-y-2">
                     <div className="flex items-center gap-2 text-brand-blue font-bold">
@@ -64,7 +64,7 @@ export function AboutPage() {
                 </div>
                 <div className="h-px w-20 bg-brand-blue/30" />
                 <p className="text-brand-slate-light text-sm leading-relaxed max-w-sm">
-                  With years of experience navigating the complexities of HR compliance and organizational design, our founder established Atticus Integrity to provide a more personalized, integrity-driven approach to corporate advisory.
+                  With years of experience navigating the complexities of HR compliance and organizational design, the founder established Atticus Integrity to provide a personalized, integrity-driven approach to corporate advisory.
                 </p>
                 <p className="text-brand-slate-light text-sm leading-relaxed max-w-sm italic">
                   "The mission is to bring clarity to the workplace, ensuring that both the business and its people can thrive in an environment of mutual respect and operational excellence."
@@ -79,7 +79,7 @@ export function AboutPage() {
           <h2 className="text-3xl font-display font-bold mb-8">Committed to Organizational Effectiveness</h2>
           <div className="max-w-2xl mx-auto text-brand-cream/80 leading-relaxed">
             <p>
-              Whether we are conducting a deep-dive HR audit, designing leadership development pathways, or resolving sensitive employee relations matters, our work is defined by a single standard: Integrity.
+              Whether the engagement involves a deep-dive HR audit, leadership development pathways, or sensitive employee relations matters, the work is defined by a single standard: Integrity.
             </p>
           </div>
         </div>

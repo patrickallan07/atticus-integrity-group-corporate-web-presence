@@ -61,10 +61,10 @@ export function HRServicesPage() {
               Atticus Integrity <span className="text-brand-blue">HR</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
-              Atticus Integrity provides independent workplace advisory services focused on organizational effectiveness, culture, and compliance. The firm's approach ensures your people strategy aligns with your commercial objectives.
+              Atticus Integrity provides independent workplace advisory services focused on organizational effectiveness, culture, and compliance. This specialized approach ensures that people strategy aligns perfectly with commercial objectives.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
-              <Link to="/contact">Discuss Your Needs</Link>
+              <Link to="/contact">Discuss Requirements</Link>
             </Button>
           </motion.div>
         </div>
