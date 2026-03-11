@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 import { Shield, Target, Award, User } from 'lucide-react';
 export function AboutPage() {
   const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 120 40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='120' height='40' rx='2' fill='%23F5F5F0'/%3E%3Cpath d='M20 20 L30 10 L30 30 Z' fill='%231F4A38'/%3E%3Ctext x='60' y='24' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='8' letter-spacing='0.1' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3Cpath d='M90 10 L100 20 L90 30 Z' fill='%231F4A38'/%3E%3C/svg%3E`;
@@ -54,17 +53,18 @@ export function AboutPage() {
                 <div className="w-40 h-40 rounded-full border-4 border-white shadow-soft overflow-hidden">
                   <img
                     src={founderImageUrl}
-                    alt="Founder & Principal"
+                    alt="Patrick McCullough - Founder & Principal"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-brand-green">Founder & Principal</h3>
-                  <p className="text-brand-blue font-semibold uppercase tracking-widest text-xs mt-1">Strategic Workplace Advisor</p>
+                  <p className="text-brand-blue font-bold uppercase tracking-widest text-[10px] mb-1">Founder & Principal</p>
+                  <h3 className="text-2xl font-display font-bold text-brand-green mb-1">Patrick McCullough</h3>
+                  <p className="text-brand-slate-light font-medium text-sm">Strategic Workplace Advisor</p>
                 </div>
                 <div className="h-px w-20 bg-brand-blue/30" />
                 <p className="text-brand-slate-light text-sm leading-relaxed max-w-sm">
-                  With years of experience navigating the complexities of HR compliance and organizational design, the founder established Atticus Integrity to provide a personalized, integrity-driven approach to corporate advisory.
+                  With years of experience navigating the complexities of HR compliance and organizational design, Patrick McCullough established Atticus Integrity to provide a personalized, integrity-driven approach to corporate advisory.
                 </p>
                 <p className="text-brand-slate-light text-sm leading-relaxed max-w-sm italic">
                   "The mission is to bring clarity to the workplace, ensuring that both the business and its people can thrive in an environment of mutual respect and operational excellence."
