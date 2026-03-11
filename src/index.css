@@ -3,41 +3,38 @@
 @tailwind utilities;
 @layer base {
   :root {
-    /* Core Colors Updated to Brand Identity */
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
-    --primary: 202 78% 26%; /* #0F4C75 */
-    --primary-foreground: 191 97% 95%; /* #A5F3FC */
-    --muted: 210 40% 96.1%;
+    --background: 60 20% 95%; /* #F5F5F0 - Cream */
+    --foreground: 215 25% 27%; /* #334155 - Slate */
+    --primary: 153 41% 21%; /* #1F4A38 - Hunter Green */
+    --primary-foreground: 60 20% 95%;
+    --muted: 215 15% 90%;
     --muted-foreground: 215 16% 47%;
     --border: 214 32% 91%;
-    --ring: 191 97% 42%; /* #0EA5E9 */
+    --ring: 196 100% 33%; /* #007BA7 - Cerulean */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 215 25% 27%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --secondary: 187 100% 42%; /* #00B4D8 */
-    --secondary-foreground: 210 20% 98%;
-    --accent: 187 100% 42%;
-    --accent-foreground: 222 47% 11%;
+    --popover-foreground: 215 25% 27%;
+    --secondary: 196 100% 33%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 196 100% 33%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --input: 214 32% 91%;
     --radius: 0.5rem;
-    --sidebar-background: 210 40% 98%;
-    --sidebar-foreground: 222 47% 26%;
   }
   .dark {
-    --background: 222 47% 6%;
-    --foreground: 191 97% 95%;
-    --primary: 187 100% 42%;
-    --primary-foreground: 222 47% 6%;
-    --muted: 222 47% 15%;
+    --background: 215 25% 15%;
+    --foreground: 60 20% 95%;
+    --primary: 196 100% 33%;
+    --primary-foreground: 215 25% 15%;
+    --muted: 215 25% 20%;
     --muted-foreground: 215 20% 65%;
-    --border: 222 47% 15%;
-    --ring: 187 100% 42%;
-    --card: 222 47% 6%;
-    --card-foreground: 191 97% 95%;
+    --border: 215 25% 25%;
+    --ring: 196 100% 33%;
+    --card: 215 25% 12%;
+    --card-foreground: 60 20% 95%;
   }
   * {
     @apply border-border;
@@ -47,45 +44,25 @@
     -webkit-font-smoothing: antialiased;
   }
   body {
-    @apply bg-background text-brand-navy-dark;
+    @apply bg-background text-brand-slate;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     text-rendering: optimizeLegibility;
   }
 }
 @layer components {
-  .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
-  }
-  .btn-gradient {
-    @apply btn text-white shadow-primary hover:shadow-glow hover:scale-105 active:scale-95;
-    background: linear-gradient(135deg, #1E3A8A 0%, #00B4D8 100%);
-  }
   .bg-gradient-primary {
-    background: linear-gradient(135deg, #1E3A8A 0%, #00B4D8 50%, #20B2AA 100%);
+    @apply bg-gradient-signature;
   }
   .text-gradient {
-    background: linear-gradient(90deg, #0F4C75 0%, #00B4D8 50%, #20B2AA 100%);
+    background: linear-gradient(90deg, #1F4A38 0%, #007BA7 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-glass;
-  }
-  .glass-dark {
-    @apply bg-brand-navy-dark/10 backdrop-blur-md border border-white/10 shadow-glass;
-  }
-  .shimmer-bg {
-    @apply relative overflow-hidden;
-  }
-  .shimmer-bg::before {
-    @apply absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-brand-cyan-light/20 to-transparent;
-    content: '';
-  }
   .text-display {
-    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight text-brand-navy-dark;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight text-brand-green;
   }
   .text-body {
-    @apply text-base sm:text-lg text-muted-foreground leading-relaxed;
+    @apply text-base sm:text-lg text-brand-slate-light leading-relaxed;
   }
 }

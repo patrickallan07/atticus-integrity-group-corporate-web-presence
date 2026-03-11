@@ -40,22 +40,22 @@ const services = [
 export function HRServicesPage() {
   return (
     <CorporateLayout>
-      <section className="bg-slate-50 py-16 md:py-24 border-b border-slate-200">
+      <section className="bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-display text-brand-navy-dark mb-6">
-              Atticus Integrity <span className="text-brand-cyan">HR Advisory</span>
+            <h1 className="text-display mb-6">
+              Atticus Integrity <span className="text-brand-blue">HR Advisory</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
               People are your greatest asset. We help you manage, protect, and empower your workforce through professional advisory services that blend empathy with legal precision.
             </p>
-            <Button asChild size="lg" className="bg-brand-teal-deep text-white hover:bg-brand-teal-deep/90 h-12 shadow-sm">
+            <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm">
               <Link to="/contact">Request an HR Audit</Link>
             </Button>
           </div>
         </div>
       </section>
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, idx) => (
@@ -66,15 +66,15 @@ export function HRServicesPage() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <Card className="h-full hover:-translate-y-1 hover:shadow-xl transition-all duration-300 border-slate-200">
+                <Card className="h-full hover:-translate-y-1 hover:shadow-xl transition-all duration-300 border-brand-slate/10 bg-brand-cream/10">
                   <CardHeader>
-                    <div className="h-12 w-12 bg-brand-teal-deep/5 rounded-lg flex items-center justify-center text-brand-teal-deep mb-2">
-                      <service.icon size={24} />
+                    <div className="h-12 w-12 bg-brand-blue/10 rounded-lg flex items-center justify-center text-brand-green mb-2">
+                      <service.icon size={24} className="text-brand-blue" />
                     </div>
-                    <CardTitle className="text-brand-navy-dark">{service.title}</CardTitle>
+                    <CardTitle className="text-brand-green font-bold">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-brand-slate-light text-sm leading-relaxed">
                       {service.description}
                     </p>
                   </CardContent>
@@ -84,13 +84,13 @@ export function HRServicesPage() {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-brand-navy-dark text-white text-center">
+      <section className="py-20 bg-gradient-signature text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Ready to Optimize Your Workplace?</h2>
-          <p className="text-brand-cyan-light/70 mb-10 text-lg">
+          <p className="text-brand-cream/80 mb-10 text-lg">
             Our advisors are ready to help you navigate complex employee situations with confidence and integrity.
           </p>
-          <Button asChild size="lg" className="bg-gradient-brand text-white hover:scale-105 transition-transform h-14 px-10 font-bold border-none">
+          <Button asChild size="lg" className="bg-white text-brand-green hover:bg-brand-cream hover:scale-105 transition-transform h-14 px-10 font-bold border-none">
             <Link to="/contact">Book a Consultation</Link>
           </Button>
         </div>
