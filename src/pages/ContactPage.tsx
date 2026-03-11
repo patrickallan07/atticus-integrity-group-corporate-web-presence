@@ -66,10 +66,14 @@ export function ContactPage() {
       setIsSubmitting(false);
     }
   }, [form]);
+  const handleReset = () => {
+    setIsSuccess(false);
+    form.reset();
+  };
   if (isSuccess) {
     return (
       <div className="bg-brand-cream min-h-[70vh] flex items-center">
-        <div className="max-w-xl mx-auto px-4 text-center py-16">
+        <div className="max-w-xl mx-auto px-4 text-center py-16 animate-in fade-in zoom-in duration-500">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-green/10 text-brand-green mb-8">
             <CheckCircle2 size={48} />
           </div>
@@ -77,9 +81,14 @@ export function ContactPage() {
           <p className="text-brand-slate-light text-lg mb-10 leading-relaxed">
             Thank you for reaching out. I have received your information and will personally review the requirements to ensure the best possible advisory support. Expect a response shortly.
           </p>
-          <Button asChild size="lg" className="bg-brand-green text-white px-8">
-            <Link to="/">Return to Home</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button asChild size="lg" className="bg-brand-green text-white px-8">
+              <Link to="/">Return to Home</Link>
+            </Button>
+            <Button variant="outline" size="lg" className="border-brand-blue/30 text-brand-green" onClick={handleReset}>
+              Send Another Message
+            </Button>
+          </div>
         </div>
       </div>
     );
@@ -88,7 +97,7 @@ export function ContactPage() {
     <div className="bg-brand-cream min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="space-y-12">
+          <div className="space-y-12 animate-in slide-in-from-left duration-700">
             <div>
               <h1 className="text-display mb-6">Get in <span className="text-brand-blue">Touch</span></h1>
               <p className="text-body max-w-lg mb-8">
@@ -96,8 +105,8 @@ export function ContactPage() {
               </p>
             </div>
             <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0">
+              <div className="flex items-start gap-4 group">
+                <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue/10 transition-colors">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -105,8 +114,8 @@ export function ContactPage() {
                   <p className="text-brand-slate-light text-lg font-semibold tracking-tight">1 (888) 757-3770</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0">
+              <div className="flex items-start gap-4 group">
+                <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue/10 transition-colors">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -115,17 +124,17 @@ export function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-brand-slate/10">
+            <div className="p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-brand-slate/10 shadow-soft">
               <h4 className="font-bold text-brand-green mb-2">Service Availability</h4>
               <div className="grid grid-cols-2 gap-y-2 text-sm text-brand-slate-light">
                 <span>Mon - Fri:</span>
-                <span className="text-brand-green font-semibold">9:00 AM - 5:30 PM (CST)</span>
+                <span className="text-brand-green font-semibold text-right">9:00 AM - 5:30 PM (CST)</span>
                 <span>Sat - Sun:</span>
-                <span className="text-brand-green font-semibold">Closed</span>
+                <span className="text-brand-green font-semibold text-right">Closed</span>
               </div>
             </div>
           </div>
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-soft border border-brand-slate/5">
+          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-brand-slate/5 animate-in slide-in-from-right duration-700">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -134,7 +143,7 @@ export function ContactPage() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-brand-green">Full Name</FormLabel>
+                        <FormLabel className="text-brand-green font-semibold">Full Name</FormLabel>
                         <FormControl>
                           <Input placeholder="John Doe" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green" {...field} />
                         </FormControl>
@@ -147,7 +156,7 @@ export function ContactPage() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-brand-green">Email Address</FormLabel>
+                        <FormLabel className="text-brand-green font-semibold">Email Address</FormLabel>
                         <FormControl>
                           <Input placeholder="john@company.com" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green" {...field} />
                         </FormControl>
@@ -162,7 +171,7 @@ export function ContactPage() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-brand-green">Phone Number</FormLabel>
+                        <FormLabel className="text-brand-green font-semibold">Phone Number</FormLabel>
                         <FormControl>
                           <Input placeholder="1 (888) 000-0000" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green" {...field} />
                         </FormControl>
@@ -175,7 +184,7 @@ export function ContactPage() {
                     name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-brand-green">Service Interest</FormLabel>
+                        <FormLabel className="text-brand-green font-semibold">Service Interest</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="bg-brand-cream/30 border-brand-slate/10 focus:ring-brand-green">
@@ -198,7 +207,7 @@ export function ContactPage() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-brand-green">Message</FormLabel>
+                      <FormLabel className="text-brand-green font-semibold">Message</FormLabel>
                       <FormControl>
                         <Textarea
                           placeholder="How can Atticus Integrity assist your business today?"
@@ -213,7 +222,7 @@ export function ContactPage() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full h-14 bg-brand-green hover:bg-brand-green/90 hover:scale-[1.01] transition-all text-white text-lg font-bold border-none"
+                  className="w-full h-14 bg-brand-green hover:bg-brand-green/90 hover:scale-[1.01] active:scale-95 transition-all text-white text-lg font-bold border-none shadow-lg"
                 >
                   {isSubmitting ? (
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />

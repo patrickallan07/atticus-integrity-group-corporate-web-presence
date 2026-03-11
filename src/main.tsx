@@ -70,7 +70,13 @@ createRoot(container).render(
           closeButton
           theme="light"
           toastOptions={{
-            style: { border: '1px solid #3341551A' }
+            style: { 
+              border: '1px solid #3341551A',
+              backgroundColor: '#F5F5F0',
+              color: '#1F4A38',
+              borderRadius: '0.75rem',
+            },
+            className: 'font-sans'
           }}
         />
       </ErrorBoundary>
