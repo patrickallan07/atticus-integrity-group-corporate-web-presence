@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'HR', href: '/hr-advisory' },
-  { name: 'Financial Services', href: '/financial-services' },
+  { name: 'Financial', href: '/financial-services' },
   { name: 'About', href: '/about' },
 ];
 export function Navbar() {
