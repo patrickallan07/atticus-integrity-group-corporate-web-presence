@@ -64,8 +64,9 @@ export function ContactPage() {
       });
       form.reset();
     } catch (error) {
+      console.error('Submission error:', error);
       toast.error('Submission Error', {
-        description: error instanceof Error ? error.message : 'A technical error occurred. Please call the direct line for immediate assistance.'
+        description: 'A technical error occurred while routing your inquiry. Please call the direct line for immediate advisory assistance.'
       });
     } finally {
       setIsSubmitting(false);
@@ -73,43 +74,37 @@ export function ContactPage() {
   }, [form]);
   const handleReset = () => {
     setIsSuccess(false);
-    form.reset({
-      name: '',
-      email: '',
-      phone: '',
-      service: 'general',
-      message: '',
-    });
+    form.reset();
   };
   return (
-    <div className="bg-brand-cream min-h-[calc(100vh-10rem)] flex flex-col justify-center">
+    <div className="bg-brand-cream min-h-[calc(100vh-10rem)] flex flex-col">
       <AnimatePresence mode="wait">
         {isSuccess ? (
           <motion.div
             key="success-screen"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="flex-1 flex items-center justify-center py-24 md:py-36 bg-brand-cream"
+            className="flex-1 flex items-center justify-center py-20 md:py-32"
           >
-            <div className="max-w-xl mx-auto px-4 text-center">
+            <div className="max-w-xl mx-auto px-6 text-center">
               <motion.div
-                initial={{ rotate: -15, scale: 0 }}
-                animate={{ rotate: 0, scale: 1 }}
-                transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-brand-green/10 text-brand-green mb-10 shadow-glow-lg border border-brand-green/20"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.2 }}
+                className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-brand-green text-white mb-10 shadow-glow border-4 border-white"
               >
-                <CheckCircle2 size={72} className="text-brand-blue" />
+                <CheckCircle2 size={56} />
               </motion.div>
-              <h1 className="text-4xl md:text-6xl font-display font-bold text-brand-green mb-8 tracking-tight">Directly Received</h1>
-              <p className="text-brand-slate-light text-xl mb-12 leading-relaxed font-medium">
-                Thank you for reaching out. As the principal of Atticus Integrity, I personally review every inquiry to ensure I provide the most effective advisory support. I will be in contact with you shortly to discuss your business requirements.
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-green mb-6 tracking-tight">Directly Received</h1>
+              <p className="text-brand-slate-light text-lg mb-12 leading-relaxed font-medium">
+                Thank you for reaching out. As the principal of Atticus Integrity, I personally review every inquiry to ensure the most effective advisory alignment. I will be in contact with you shortly to discuss your professional requirements.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-                <Button asChild size="lg" className="bg-brand-green text-white px-12 h-16 border-none shadow-xl hover:bg-brand-green/90 hover:scale-[1.03] transition-all w-full sm:w-auto font-bold text-lg">
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button asChild size="lg" className="bg-brand-green text-white px-10 h-14 border-none shadow-xl hover:bg-brand-green/90 font-bold">
                   <Link to="/">Return to Home</Link>
                 </Button>
-                <Button variant="ghost" size="lg" className="text-brand-green hover:bg-brand-blue/10 h-16 px-10 w-full sm:w-auto font-semibold" onClick={handleReset}>
+                <Button variant="outline" size="lg" className="border-brand-blue/30 text-brand-green hover:bg-brand-blue/5 h-14 px-8 font-semibold" onClick={handleReset}>
                   Send Another Inquiry
                 </Button>
               </div>
@@ -121,54 +116,54 @@ export function ContactPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 w-full"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
               <div className="space-y-12">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="h-1.5 w-16 bg-brand-blue mb-6 rounded-full" />
-                  <h1 className="text-display mb-8">Direct <span className="text-brand-blue">Advisory</span> Inquiry</h1>
+                  <div className="h-1.5 w-12 bg-brand-blue mb-6 rounded-full" />
+                  <h1 className="text-display mb-6">Direct <span className="text-brand-blue">Advisory</span> Inquiry</h1>
                   <p className="text-body max-w-lg mb-10 font-medium">
-                    Whether you require a comprehensive HR audit, leadership counsel, or professional bookkeeping, I am ready to personally discuss how Atticus Integrity can bring clarity and integrity to your operations.
+                    Whether you require a comprehensive HR audit, leadership counsel, or professional bookkeeping, I am available to personally discuss how Atticus Integrity can bring clarity and integrity to your operations.
                   </p>
                 </motion.div>
-                <div className="space-y-10">
-                  <div className="flex items-start gap-6 group">
-                    <div className="h-14 w-14 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue transition-all group-hover:text-white shadow-soft">
-                      <Phone size={28} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="flex items-start gap-4 p-6 bg-white/50 rounded-2xl border border-brand-slate/5 shadow-soft">
+                    <div className="h-12 w-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0">
+                      <Phone size={24} />
                     </div>
                     <div>
                       <h4 className="font-bold text-brand-green mb-1 uppercase tracking-widest text-[10px]">Direct Line</h4>
-                      <p className="text-brand-slate-light text-2xl font-bold tracking-tight">1 (888) 757-3770</p>
+                      <p className="text-brand-slate-light text-lg font-bold">1 (888) 757-3770</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-6 group">
-                    <div className="h-14 w-14 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue transition-all group-hover:text-white shadow-soft">
-                      <Mail size={28} />
+                  <div className="flex items-start gap-4 p-6 bg-white/50 rounded-2xl border border-brand-slate/5 shadow-soft">
+                    <div className="h-12 w-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0">
+                      <Mail size={24} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-brand-green mb-1 uppercase tracking-widest text-[10px]">Inquiry Email</h4>
-                      <p className="text-brand-slate-light text-2xl font-bold tracking-tight">info@atticusintegrity.com</p>
+                      <h4 className="font-bold text-brand-green mb-1 uppercase tracking-widest text-[10px]">Email</h4>
+                      <p className="text-brand-slate-light text-lg font-bold">info@atticusintegrity.com</p>
                     </div>
                   </div>
                 </div>
-                <div className="p-10 bg-white/70 backdrop-blur-xl rounded-[2rem] border border-brand-slate/10 shadow-soft">
-                  <h4 className="font-bold text-brand-green mb-6 flex items-center gap-3">
-                    <Clock size={20} className="text-brand-blue" />
+                <div className="p-8 bg-brand-green text-white rounded-[2rem] shadow-xl relative overflow-hidden">
+                  <Clock className="absolute top-4 right-4 text-brand-blue/30" size={64} />
+                  <h4 className="font-bold mb-6 flex items-center gap-3 relative z-10">
                     Professional Availability
                   </h4>
-                  <div className="space-y-4 text-sm">
-                    <div className="flex justify-between items-center pb-3 border-b border-brand-slate/5">
-                      <span className="font-bold text-brand-slate-light">Monday - Friday</span>
-                      <span className="text-brand-green font-bold">9:00 AM - 5:30 PM (CST)</span>
+                  <div className="space-y-4 text-sm relative z-10">
+                    <div className="flex justify-between items-center pb-3 border-b border-white/10">
+                      <span className="font-medium text-brand-cream/70">Monday - Friday</span>
+                      <span className="font-bold">9:00 AM - 5:30 PM (CST)</span>
                     </div>
-                    <div className="flex justify-between items-center italic">
-                      <span className="text-brand-slate/50 font-medium">Saturday - Sunday</span>
-                      <span className="text-brand-blue font-bold">By Appointment Only</span>
+                    <div className="flex justify-between items-center italic text-brand-cream/60">
+                      <span>Saturday - Sunday</span>
+                      <span className="font-bold text-brand-blue">By Appointment</span>
                     </div>
                   </div>
                 </div>
@@ -177,19 +172,19 @@ export function ContactPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border border-brand-slate/5 relative"
+                className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-brand-slate/5"
               >
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-brand-green font-bold text-sm">Full Name</FormLabel>
+                            <FormLabel className="text-brand-green font-bold text-xs uppercase tracking-wider">Full Name</FormLabel>
                             <FormControl>
-                              <Input placeholder="Full Name" className="bg-brand-cream/40 border-brand-slate/10 focus-visible:ring-brand-blue h-14 text-base" {...field} />
+                              <Input placeholder="Your Name" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-blue h-12" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -200,24 +195,24 @@ export function ContactPage() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-brand-green font-bold text-sm">Email Address</FormLabel>
+                            <FormLabel className="text-brand-green font-bold text-xs uppercase tracking-wider">Email Address</FormLabel>
                             <FormControl>
-                              <Input placeholder="email@company.com" className="bg-brand-cream/40 border-brand-slate/10 focus-visible:ring-brand-blue h-14 text-base" {...field} />
+                              <Input placeholder="email@company.com" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-blue h-12" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
                         )}
                       />
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-brand-green font-bold text-sm">Contact Number</FormLabel>
+                            <FormLabel className="text-brand-green font-bold text-xs uppercase tracking-wider">Contact Number</FormLabel>
                             <FormControl>
-                              <Input placeholder="1 (888) 000-0000" className="bg-brand-cream/40 border-brand-slate/10 focus-visible:ring-brand-blue h-14 text-base" {...field} />
+                              <Input placeholder="1 (888) 000-0000" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-blue h-12" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -228,10 +223,10 @@ export function ContactPage() {
                         name="service"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-brand-green font-bold text-sm">Advisory Area</FormLabel>
+                            <FormLabel className="text-brand-green font-bold text-xs uppercase tracking-wider">Advisory Area</FormLabel>
                             <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
-                                <SelectTrigger className="bg-brand-cream/40 border-brand-slate/10 h-14 text-base">
+                                <SelectTrigger className="bg-brand-cream/30 border-brand-slate/10 h-12">
                                   <SelectValue placeholder="Select a service" />
                                 </SelectTrigger>
                               </FormControl>
@@ -251,11 +246,11 @@ export function ContactPage() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-brand-green font-bold text-sm">Brief Description of Needs</FormLabel>
+                          <FormLabel className="text-brand-green font-bold text-xs uppercase tracking-wider">Brief Description of Needs</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Describe current workplace or financial challenges..."
-                              className="min-h-[180px] bg-brand-cream/40 border-brand-slate/10 focus-visible:ring-brand-blue resize-none text-base p-5 leading-relaxed"
+                              placeholder="How can Atticus Integrity support your business?"
+                              className="min-h-[150px] bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-blue resize-none p-4"
                               {...field}
                             />
                           </FormControl>
@@ -266,17 +261,22 @@ export function ContactPage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-18 bg-brand-green hover:bg-brand-green/95 hover:scale-[1.01] active:scale-[0.98] transition-all text-white text-xl font-bold border-none shadow-glow-lg py-8"
+                      className="w-full h-14 bg-brand-green hover:bg-brand-green/95 hover:scale-[1.01] active:scale-[0.98] transition-all text-white text-lg font-bold border-none shadow-glow"
                     >
                       {isSubmitting ? (
-                        <Loader2 className="mr-3 h-6 w-6 animate-spin" />
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Submitting Inquiry...
+                        </>
                       ) : (
-                        <Send className="mr-3 h-6 w-6" />
+                        <>
+                          <Send className="mr-2 h-5 w-5" />
+                          Submit Inquiry
+                        </>
                       )}
-                      {isSubmitting ? 'Sending Inquiry...' : 'Submit Inquiry'}
                     </Button>
-                    <p className="text-center text-[10px] text-brand-slate/50 mt-6 leading-relaxed uppercase tracking-wider font-bold">
-                      By submitting this inquiry, you agree to the privacy policy. Information is treated with absolute integrity and is used solely for the purpose of professional advisory contact.
+                    <p className="text-center text-[10px] text-brand-slate/40 mt-4 leading-relaxed uppercase tracking-widest font-bold">
+                      All inquiries are treated with absolute professional integrity and discretion.
                     </p>
                   </form>
                 </Form>
