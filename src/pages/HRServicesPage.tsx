@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Users, FileCheck, Heart, GraduationCap, Gavel, ShieldAlert, Briefcase } from 'lucide-react';
-
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 const services = [
@@ -43,7 +42,7 @@ const services = [
   }
 ];
 export function HRServicesPage() {
-  const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 12 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='4' rx='0.24' fill='%23F5F5F0'/%3E%3Ctext x='6' y='2.2' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='0.8' letter-spacing='0.01em' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3C/svg%3E`;
+  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_100_100/B56ZwXatLkJEAQ-/0/1769919403353?e=1775088000&v=beta&t=8j2lkrX_mk0wXK8If-QtPfdPrCsFWgYw6VpwSPMJn34';
   return (
     <>
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
