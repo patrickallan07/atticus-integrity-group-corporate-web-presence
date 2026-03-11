@@ -27,8 +27,8 @@ export function HomePage() {
             <h1 className="text-display mb-8">
               Greater Levels of <span className="text-brand-blue">Effectiveness & Culture</span>
             </h1>
-            <p className="text-body mb-10 max-w-2xl">
-              Atticus Integrity is an independent HR and workplace advisory practice <strong>and financial bookkeeping service</strong> dedicated to helping organizations achieve greater levels of organizational effectiveness and culture.
+            <p className="text-body max-w-2xl mb-10">
+              Atticus Integrity is an independent human resources and workplace advisory firm offering comprehensive HR consulting and financial bookkeeping services. We partner with organizations to enhance operational efficiency, ensure compliance, and cultivate strong, high-performing workplace cultures.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-brand-green hover:bg-brand-green/90 hover:scale-[1.02] transition-all text-white font-bold h-14 px-10 border-none shadow-soft">
