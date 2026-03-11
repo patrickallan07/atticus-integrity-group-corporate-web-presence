@@ -20,7 +20,13 @@ export function Footer() {
               Delivering premium advisory and financial services with integrity at the core. A dedicated expert partner for professional growth and operational clarity.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-brand-green rounded-full hover:bg-brand-blue transition-colors text-white" aria-label="LinkedIn">
+              <a 
+                href="https://www.linkedin.com/company/atticus-integrity/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-brand-green rounded-full hover:bg-brand-blue transition-colors text-white" 
+                aria-label="LinkedIn"
+              >
                 <Linkedin size={18} />
               </a>
             </div>
