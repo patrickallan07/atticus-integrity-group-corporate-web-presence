@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react';
 export function Footer() {
-  const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 120 40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='120' height='40' rx='2' fill='%23334155'/%3E%3Cpath d='M12 28 L2 38 L22 38 Z' fill='%23FFFFFF'/%3E%3Cpath d='M98 28 L108 38 L88 38 Z' fill='%23FFFFFF'/%3E%3Ctext x='60' y='22' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='7' letter-spacing='0.1em' fill='%23FFFFFF'%3EATTICUS INTEGRITY%3C/text%3E%3C/svg%3E`;
+  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_200_200/B56ZwXatLkJEAI-/0/1769919403353?e=1775088000&amp;v=beta&amp;t=dNGp0k3ZDkYZ4bPrCnw11SXSNMp4jy_L5HQOnWB_TD4';
   return (
     <footer className="bg-brand-slate text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
