@@ -34,7 +34,7 @@ export function Footer() {
             <h4 className="text-brand-blue font-bold text-sm tracking-widest uppercase">The Practice</h4>
             <ul className="space-y-4">
               <li><Link to="/" className="text-slate-300 hover:text-white text-sm">Home</Link></li>
-              <li><Link to="/about" className="text-slate-300 hover:text-white text-sm">Who We Are</Link></li>
+              <li><Link to="/about" className="text-slate-300 hover:text-white text-sm">The Practice</Link></li>
               <li><Link to="/hr-advisory" className="text-slate-300 hover:text-white text-sm">HR Advisory</Link></li>
               <li><Link to="/financial-services" className="text-slate-300 hover:text-white text-sm">Financial Services</Link></li>
             </ul>

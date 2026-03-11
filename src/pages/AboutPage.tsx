@@ -17,7 +17,7 @@ export function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-display mb-6">Who We Are</h1>
+            <h1 className="text-display mb-6">The Practice</h1>
             <p className="text-body max-w-3xl">
               Atticus Integrity is an independent HR and workplace advisory practice dedicated to helping organizations achieve greater levels of organizational effectiveness and culture.
             </p>
@@ -28,9 +28,9 @@ export function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-green">Our Professional Ethos</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-green">Professional Ethos</h2>
               <p className="text-brand-slate-light leading-relaxed">
-                We believe that organizational success is inextricably linked to the integrity of its people systems. As an independent firm, we provide objective, high-stakes counsel that larger consultancies often overlook. Our focus is on the intersection of compliance, culture, and commercial reality.
+                Atticus Integrity believes that organizational success is inextricably linked to the integrity of its people systems. As an independent firm, we provide objective, high-stakes counsel that larger consultancies often overlook. Our focus is on the intersection of compliance, culture, and commercial reality.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
@@ -52,9 +52,9 @@ export function AboutPage() {
             <div className="bg-brand-cream/30 p-8 md:p-12 rounded-3xl border border-brand-slate/5">
               <div className="flex flex-col items-center text-center space-y-6">
                 <div className="w-40 h-40 rounded-full border-4 border-white shadow-soft overflow-hidden">
-                  <img 
-                    src={founderImageUrl} 
-                    alt="Founder & Principal" 
+                  <img
+                    src={founderImageUrl}
+                    alt="Founder & Principal"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -67,7 +67,7 @@ export function AboutPage() {
                   With years of experience navigating the complexities of HR compliance and organizational design, our founder established Atticus Integrity to provide a more personalized, integrity-driven approach to corporate advisory.
                 </p>
                 <p className="text-brand-slate-light text-sm leading-relaxed max-w-sm italic">
-                  "Our mission is to bring clarity to the workplace, ensuring that both the business and its people can thrive in an environment of mutual respect and operational excellence."
+                  "The mission is to bring clarity to the workplace, ensuring that both the business and its people can thrive in an environment of mutual respect and operational excellence."
                 </p>
               </div>
             </div>
