@@ -13,12 +13,12 @@ export function HomePage() {
           <img
             src={logoUrl}
             alt=""
-            className="absolute -top-10 -right-20 w-[800px] aspect-[2/1] object-cover object-center opacity-[0.04] rotate-12 grayscale scale-75"
+            className="absolute -top-10 -right-20 w-[800px] aspect-[3/2] object-cover object-center opacity-[0.04] rotate-12 grayscale scale-75"
           />
           <img
             src={logoUrl}
             alt=""
-            className="absolute -bottom-20 -left-20 w-[1000px] aspect-[2/1] object-cover object-center opacity-[0.04] -rotate-12 grayscale scale-75"
+            className="absolute -bottom-20 -left-20 w-[1000px] aspect-[3/2] object-cover object-center opacity-[0.04] -rotate-12 grayscale scale-75"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">

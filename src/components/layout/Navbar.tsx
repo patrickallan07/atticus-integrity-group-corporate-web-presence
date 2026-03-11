@@ -17,13 +17,13 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-28 md:h-36 items-center relative">
-          {/* Logo Section with defined width to prevent layout shift */}
-          <div className="flex items-center h-full relative w-48 md:w-64">
+          {/* Logo Section with refined width for 3:2 ratio */}
+          <div className="flex items-center h-full relative w-40 md:w-56">
             <Link
               to="/"
-              className="flex items-center transition-transform duration-500 hover:scale-[1.05] active:scale-95 z-20 absolute top-3 md:top-6 left-0"
+              className="flex items-center transition-transform duration-500 hover:scale-[1.05] active:scale-95 z-20 absolute top-4 md:top-8 left-0"
             >
-              <div className="h-32 md:h-44 aspect-[2/1] overflow-hidden rounded-sm bg-white shadow-xl border border-brand-slate/5 ring-4 ring-white/50 flex items-center justify-center">
+              <div className="h-28 md:h-40 aspect-[3/2] overflow-hidden rounded-sm bg-white shadow-xl border border-brand-slate/5 ring-4 ring-white/50 flex items-center justify-center">
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, Linkedin, Facebook, Instagram, ArrowRight } from 'lucide-react';
 export function Footer() {
   const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQEVVrYn60iyEA/company-logo_200_200/B56Zzbr8C2IcAI-/0/1773212255196/atticus_integrity_logo?e=1775088000&v=beta&t=os5WqGOOk_ZynAh-ZLf7CPzYUIfMuJaFjH531pIqMJg';
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           <div className="space-y-10">
             <div className="flex items-center">
-              <div className="h-24 aspect-[2/1] overflow-hidden rounded-sm bg-white p-1 transition-transform hover:scale-105 duration-500 shadow-lg">
+              <div className="h-24 aspect-[3/2] overflow-hidden rounded-sm bg-white p-1 transition-transform hover:scale-105 duration-500 shadow-lg">
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"
@@ -21,7 +21,7 @@ export function Footer() {
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs font-medium">
               Atticus Integrity is an independent HR and workplace advisory practice led by Patrick McCullough, dedicated to organizational effectiveness and professional bookkeeping.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-3">
               <a
                 href="https://www.linkedin.com/company/atticus-integrity/"
                 target="_blank"
@@ -30,6 +30,24 @@ export function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61587582700421"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-brand-green/20 rounded-xl hover:bg-brand-blue hover:scale-110 active:scale-95 transition-all text-white border border-white/5 shadow-sm"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/atticusintegrity/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-brand-green/20 rounded-xl hover:bg-brand-blue hover:scale-110 active:scale-95 transition-all text-white border border-white/5 shadow-sm"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
               </a>
             </div>
           </div>
