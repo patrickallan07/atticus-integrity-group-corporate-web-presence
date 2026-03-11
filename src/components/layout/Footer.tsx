@@ -5,12 +5,13 @@ export function Footer() {
   const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQEVVrYn60iyEA/company-logo_200_200/B56Zzbr8C2IcAI-/0/1773212255196/atticus_integrity_logo?e=1775088000&v=beta&t=os5WqGOOk_ZynAh-ZLf7CPzYUIfMuJaFjH531pIqMJg';
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-brand-slate text-white pt-20 pb-10">
+    <footer className="bg-brand-slate text-white pt-24 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+          <div className="space-y-10">
             <div className="flex items-center">
-              <div className="h-20 aspect-[2/1] overflow-hidden rounded-sm bg-white/5 p-1 transition-transform hover:scale-105 duration-500">
+              {/* Increased footer logo height for extreme prominence */}
+              <div className="h-24 aspect-[2/1] overflow-hidden rounded-sm bg-white p-1 transition-transform hover:scale-105 duration-500 shadow-lg">
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"
@@ -19,7 +20,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs font-medium">
-              Atticus Integrity is an independent HR and workplace advisory practice dedicated to organizational effectiveness and culture.
+              Atticus Integrity is an independent HR and workplace advisory practice led by Patrick McCullough, dedicated to organizational effectiveness and professional bookkeeping.
             </p>
             <div className="flex space-x-4">
               <a
@@ -33,7 +34,7 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-8 lg:pl-8">
             <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">The Practice</h4>
             <ul className="space-y-5">
               <li><Link to="/" className="text-slate-300 hover:text-white transition-colors text-sm font-semibold">Home</Link></li>
@@ -43,11 +44,11 @@ export function Footer() {
             </ul>
           </div>
           <div className="space-y-8">
-            <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">HR Advisory</h4>
+            <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">Advisory Areas</h4>
             <ul className="space-y-5">
-              {['Employee Relations', 'HR Compliance', 'Leadership Counsel', 'Workplace Advisory'].map((item) => (
+              {['Employee Relations', 'HR Compliance', 'Leadership Counsel', 'Financial Clarity'].map((item) => (
                 <li key={item}>
-                  <Link to="/hr-advisory" className="text-slate-300 hover:text-brand-blue transition-all text-sm font-semibold flex items-center gap-2 group">
+                  <Link to={item === 'Financial Clarity' ? "/financial-services" : "/hr-advisory"} className="text-slate-300 hover:text-brand-blue transition-all text-sm font-semibold flex items-center gap-2 group">
                     <ArrowRight size={14} className="text-brand-blue transition-transform group-hover:translate-x-1" /> {item}
                   </Link>
                 </li>
@@ -55,7 +56,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="space-y-8">
-            <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">Contact</h4>
+            <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">Direct Contact</h4>
             <ul className="space-y-6 text-sm text-slate-300">
               <li className="flex items-start gap-4">
                 <div className="p-2 bg-brand-green/10 rounded-lg text-brand-green">
@@ -71,7 +72,7 @@ export function Footer() {
                   <Mail size={18} />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Email Inquiry</p>
+                  <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Inquiry Email</p>
                   <span className="font-medium text-white">info@atticusintegrity.com</span>
                 </div>
               </li>

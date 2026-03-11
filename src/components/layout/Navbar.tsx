@@ -16,23 +16,25 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 md:h-28 items-center transition-all duration-500 ease-in-out relative">
-          <div className="flex items-center h-full overflow-visible relative">
+        {/* Increased height for the container */}
+        <div className="flex justify-between h-28 md:h-36 items-center relative">
+          <div className="flex items-center h-full relative">
             <Link
               to="/"
-              className="flex items-center transition-transform hover:scale-[1.02] active:scale-95 z-10"
+              className="flex items-center transition-transform duration-500 hover:scale-[1.05] active:scale-95 z-20 absolute top-2 md:top-4"
             >
-              <div className="h-16 md:h-20 aspect-[2/1] overflow-hidden rounded-sm">
+              {/* Overflowing Logo Container */}
+              <div className="h-32 md:h-44 aspect-[2/1] overflow-hidden rounded-sm bg-white shadow-xl border border-brand-slate/5 ring-4 ring-white/50">
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"
-                  className="h-full w-full transition-all duration-500 object-cover object-center scale-125 drop-shadow-sm"
+                  className="h-full w-full transition-all duration-700 object-cover object-center scale-125 drop-shadow-md"
                 />
               </div>
             </Link>
           </div>
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
+          {/* Desktop Navigation - Centered vertically in the expanded bar */}
+          <div className="hidden md:flex items-center space-x-10 h-full">
             <div className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
@@ -54,14 +56,14 @@ export function Navbar() {
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Menu Button - Centered vertically in the expanded bar */}
+          <div className="md:hidden flex items-center h-full">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-brand-green hover:text-brand-blue transition-all p-3 rounded-xl bg-brand-cream/50 active:scale-90"
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
           </div>
         </div>
@@ -69,7 +71,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-300 absolute top-full left-0 w-full shadow-2xl z-[60] overflow-y-auto max-h-[calc(100vh-8rem)]">
-          <div className="px-6 pt-4 pb-12 space-y-1">
+          <div className="px-6 pt-12 pb-12 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
