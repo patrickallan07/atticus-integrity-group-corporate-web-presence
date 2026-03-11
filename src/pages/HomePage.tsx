@@ -82,7 +82,7 @@ export function HomePage() {
                 <Card className="h-full border-brand-slate/10 bg-brand-cream/30 hover:shadow-xl transition-all duration-300 overflow-hidden group">
                   <div className="h-64 bg-brand-green relative">
                     <img
-                      src="https://images.unsplash.com/photo-1454165833767-027ffea10c3b?q=80&w=800&auto=format&fit=crop"
+                      src="https://images.pexels.com/photos/394372/pexels-photo-394372.jpeg?auto=compress&cs=tinysrgb&w=800&q=80&fit=crop"
                       alt="Financial Services"
                       className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
                     />
