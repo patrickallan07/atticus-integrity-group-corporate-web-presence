@@ -54,7 +54,7 @@ export function FinancialServicesPage() {
               Atticus Integrity <span className="text-brand-blue">Financial</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
-              Numbers tell the story of a business. Atticus Integrity ensures that story is accurate, transparent, and formatted to support informed decision-making at every level.
+              Atticus Integrity provides professional bookkeeping <strong>and HR advisory services</strong> designed to ensure your business story is accurate, transparent, and formatted for growth.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
               <Link to="/contact">Get in Touch</Link>

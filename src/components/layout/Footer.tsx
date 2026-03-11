@@ -16,7 +16,7 @@ export function Footer() {
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
-              Atticus Integrity is an independent HR and workplace advisory practice dedicated to organizational effectiveness and culture.
+              Atticus Integrity is an independent HR and workplace advisory practice <strong>and financial bookkeeping service</strong> dedicated to organizational effectiveness and culture.
             </p>
             <div className="flex space-x-4">
               <a
