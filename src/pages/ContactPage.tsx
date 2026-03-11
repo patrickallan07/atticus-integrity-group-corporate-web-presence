@@ -266,7 +266,7 @@ export function ContactPage() {
                       {isSubmitting ? 'Submitting Inquiry...' : 'Send Message'}
                     </Button>
                     <p className="text-center text-xs text-brand-slate/40 mt-4">
-                      By submitting this form, you agree to our privacy policy. We value your privacy and handle all data with absolute integrity.
+                      By submitting this form, you agree to the privacy policy. Atticus Integrity values privacy and handles all data with absolute integrity.
                     </p>
                   </form>
                 </Form>

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'HR Advisory', href: '/hr-advisory' },
+  { name: 'HR', href: '/hr-advisory' },
   { name: 'Financial Services', href: '/financial-services' },
   { name: 'About', href: '/about' },
 ];
@@ -64,7 +64,7 @@ export function Navbar() {
           </div>
         </div>
       </div>
-      {/* Mobile Menu - Positioned top-full to ensure it starts exactly below the navbar border */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-300 absolute top-full left-0 w-full shadow-2xl z-[60] overflow-y-auto max-h-[calc(100vh-8rem)]">
           <div className="px-6 pt-4 pb-12 space-y-1">
