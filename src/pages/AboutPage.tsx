@@ -76,7 +76,9 @@ export function AboutPage() {
       </section>
       <section className="py-20 bg-brand-green text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-display font-bold mb-8">Committed to Organizational Effectiveness</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-white">
+            Where Integrity Guides Every Decision
+          </h2>
           <div className="max-w-2xl mx-auto text-brand-cream/80 leading-relaxed">
             <p>
               Whether the engagement involves a deep-dive HR audit, precision bookkeeping, or sensitive leadership counsel, the work is defined by a single standard: Integrity.
