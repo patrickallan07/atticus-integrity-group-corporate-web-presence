@@ -36,16 +36,16 @@ export function HomePage() {
               Professional Integrity, Measured Success
             </div>
             <h1 className="text-display mb-8">
-              Navigating Your Business with <span className="text-brand-blue">Unwavering Integrity</span>
+              Navigating Business with <span className="text-brand-blue">Unwavering Integrity</span>
             </h1>
             <p className="text-body mb-10 max-w-2xl">
-              Atticus Integrity provides premium HR Advisory and Financial Services designed to foster trust, clarity, and sustainable growth for modern enterprises.
+              Atticus Integrity provides premium HR Advisory and Financial Services designed to foster trust, clarity, and sustainable growth for the modern enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-brand-green hover:bg-brand-green/90 hover:scale-[1.02] transition-all text-white font-bold h-14 px-8 border-none shadow-soft">
+              <Button asChild size="lg" className="bg-brand-green hover:bg-brand-green/90 hover:scale-[1.02] transition-all text-white font-bold h-14 px-10 border-none shadow-soft">
                 <Link to="/contact">Get in Touch</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-brand-blue/30 text-brand-green hover:bg-brand-blue/5 h-14 px-8">
+              <Button asChild variant="outline" size="lg" className="border-brand-blue/30 text-brand-green hover:bg-brand-blue/5 h-14 px-10">
                 <a href="#divisions">Explore Divisions</a>
               </Button>
             </div>
@@ -55,7 +55,7 @@ export function HomePage() {
       <section id="divisions" className="py-24 bg-white border-y border-brand-slate/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-green mb-4">Core Service Divisions</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-green mb-4">Service Divisions</h2>
             <div className="h-1.5 w-20 bg-brand-blue mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -78,7 +78,7 @@ export function HomePage() {
                   </div>
                   <CardContent className="p-8">
                     <p className="text-brand-slate-light mb-6 leading-relaxed">
-                      Transform workplace culture with expert advisory on employee relations, compliance, and strategic HR management.
+                      Strategic advisory on employee relations, compliance, and workplace culture to protect and empower the workforce.
                     </p>
                     <div className="flex items-center text-brand-green font-bold group-hover:text-brand-blue transition-colors">
                       Learn More <ChevronRight size={18} className="ml-1" />
@@ -106,7 +106,7 @@ export function HomePage() {
                   </div>
                   <CardContent className="p-8">
                     <p className="text-brand-slate-light mb-6 leading-relaxed">
-                      Precision bookkeeping and financial reporting services to provide absolute clarity over business performance.
+                      Precision bookkeeping and financial reporting services to provide absolute clarity over operational performance.
                     </p>
                     <div className="flex items-center text-brand-green font-bold group-hover:text-brand-blue transition-colors">
                       Learn More <ChevronRight size={18} className="ml-1" />
@@ -127,9 +127,9 @@ export function HomePage() {
               </h2>
               <div className="space-y-6">
                 {[
-                  { title: "Bespoke Solutions", text: "Atticus Integrity rejects one-size-fits-all approaches. Every strategy is tailored to the unique business context." },
-                  { title: "Uncompromising Ethics", text: "Integrity is not just a brand name; it's the foundation of every professional interaction." },
-                  { title: "Data-Driven Insights", text: "Whether HR or Finance, advisory insights are backed by rigorous data and industry benchmarking." }
+                  { title: "Bespoke Solutions", text: "Every strategy is tailored to the unique business context, rejecting one-size-fits-all approaches." },
+                  { title: "Uncompromising Ethics", text: "Integrity is the foundation of every professional interaction and advisory engagement." },
+                  { title: "Data-Driven Insights", text: "Advisory insights are backed by rigorous data analysis and industry benchmarking." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="shrink-0 h-8 w-8 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-xs">
