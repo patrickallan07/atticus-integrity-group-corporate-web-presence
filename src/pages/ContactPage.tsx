@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, Send, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
@@ -67,28 +67,17 @@ export function ContactPage() {
               <div>
                 <h1 className="text-display mb-6">Get in <span className="text-brand-blue">Touch</span></h1>
                 <p className="text-body max-w-lg mb-8">
-                  Whether you need a full HR audit or just basic bookkeeping support, our team is ready to discuss how we can bring integrity and clarity to your business.
+                  Whether you need a full HR audit, recruitment support, or professional bookkeeping, our team is ready to discuss how we can bring integrity and clarity to your business.
                 </p>
               </div>
               <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0">
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brand-green mb-1">Our Headquarters</h4>
-                    <p className="text-brand-slate-light text-sm leading-relaxed">
-                      Level 12, Corporate Tower<br />Sydney, NSW 2000
-                    </p>
-                  </div>
-                </div>
                 <div className="flex items-start gap-4">
                   <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0">
                     <Phone size={24} />
                   </div>
                   <div>
                     <h4 className="font-bold text-brand-green mb-1">Call Us</h4>
-                    <p className="text-brand-slate-light text-sm">1300 ATTICUS</p>
+                    <p className="text-brand-slate-light text-lg font-semibold tracking-tight">1 (888) 757-3770</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -97,15 +86,15 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-brand-green mb-1">Email Inquiry</h4>
-                    <p className="text-brand-slate-light text-sm">info@atticusintegrity.com</p>
+                    <p className="text-brand-slate-light text-lg">info@atticusintegrity.com</p>
                   </div>
                 </div>
               </div>
               <div className="p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-brand-slate/10">
-                <h4 className="font-bold text-brand-green mb-2">Office Hours</h4>
+                <h4 className="font-bold text-brand-green mb-2">Service Availability</h4>
                 <div className="grid grid-cols-2 gap-y-2 text-sm text-brand-slate-light">
                   <span>Mon - Fri:</span>
-                  <span className="text-brand-green font-semibold">9:00 AM - 5:30 PM</span>
+                  <span className="text-brand-green font-semibold">9:00 AM - 5:30 PM (EST)</span>
                   <span>Sat - Sun:</span>
                   <span className="text-brand-green font-semibold">Closed</span>
                 </div>
@@ -150,7 +139,7 @@ export function ContactPage() {
                         <FormItem>
                           <FormLabel className="text-brand-green">Phone Number</FormLabel>
                           <FormControl>
-                            <Input placeholder="0400 000 000" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green" {...field} />
+                            <Input placeholder="1 (888) 000-0000" className="bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -169,7 +158,7 @@ export function ContactPage() {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="hr">HR Advisory</SelectItem>
+                              <SelectItem value="hr">HR Advisory / Recruiting</SelectItem>
                               <SelectItem value="financial">Financial Services</SelectItem>
                               <SelectItem value="general">General Inquiry</SelectItem>
                             </SelectContent>

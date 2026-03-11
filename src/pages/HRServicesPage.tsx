@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Users, FileCheck, Heart, GraduationCap, Gavel, ShieldAlert } from 'lucide-react';
+import { Users, FileCheck, Heart, GraduationCap, Gavel, ShieldAlert, Briefcase } from 'lucide-react';
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -21,6 +21,11 @@ const services = [
     title: "HR Compliance",
     description: "Ensuring your business meets all Modern Award requirements, Fair Work Act standards, and safety regulations.",
     icon: FileCheck
+  },
+  {
+    title: "Recruiting / Talent Acquisition",
+    description: "Full-cycle recruitment strategies, candidate sourcing, and onboarding to build elite teams.",
+    icon: Briefcase
   },
   {
     title: "Leadership Coaching",
@@ -49,7 +54,7 @@ export function HRServicesPage() {
           <div className="absolute -bottom-32 -left-24 w-[600px] h-[600px] bg-brand-blue/5 -rotate-12" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
