@@ -12,13 +12,14 @@ const navLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
+  // Official Brand Logo (Hunter Green text on Cream background for Navbar)
+  const logoUrl = "https://placehold.co/600x200/F5F5F0/1F4A38/png?text=ATTICUS+INTEGRITY";
   return (
     <nav className="sticky top-0 z-50 w-full bg-brand-cream/95 backdrop-blur-md border-b border-brand-slate/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center transition-opacity hover:opacity-90">
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
@@ -46,7 +47,7 @@ export function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-brand-green hover:text-brand-blue transition-colors"
+              className="text-brand-green hover:text-brand-blue transition-colors p-2"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}

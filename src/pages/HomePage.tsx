@@ -6,11 +6,12 @@ import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 export function HomePage() {
-  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
+  // Official Brand Logo (Grayscale/Transparent base for watermarks)
+  const logoUrl = "https://placehold.co/600x200/F5F5F0/1F4A38/png?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
       <section className="relative min-h-[85vh] flex items-center bg-brand-cream overflow-hidden">
-        {/* Brand Watermark Background Elements */}
+        {/* Brand Watermark Background Elements - Consolidated Identity */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
           <img
             src={logoUrl}

@@ -38,11 +38,11 @@ const financialServices = [
   }
 ];
 export function FinancialServicesPage() {
-  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
+  const logoUrl = "https://placehold.co/600x200/F5F5F0/1F4A38/png?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
       <section className="relative bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
-        {/* Brand Watermark Background Elements */}
+        {/* Brand Watermark Background Elements - Consolidated Identity */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
           <img
             src={logoUrl}

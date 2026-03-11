@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react';
 export function Footer() {
-  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
+  // Official Brand Logo (White text for the Dark Slate footer background)
+  const logoUrl = "https://placehold.co/600x200/334155/FFFFFF/png?text=ATTICUS+INTEGRITY";
   return (
     <footer className="bg-brand-slate text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +17,7 @@ export function Footer() {
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
-              Providing premium advisory and financial services with integrity and excellence at the core. A dedicated partner in professional growth and operational clarity.
+              Delivering premium advisory and financial services with integrity at the core. A dedicated expert partner for professional growth and operational clarity.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="p-2 bg-brand-green rounded-full hover:bg-brand-blue transition-colors text-white" aria-label="LinkedIn">
@@ -53,7 +54,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-slate-300">
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-green shrink-0" />
-                <span>1 (888) 757-3770</span>
+                <span className="font-medium">1 (888) 757-3770</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand-green shrink-0" />
