@@ -14,15 +14,15 @@ export function Navbar() {
   const location = useLocation();
   const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_100_100/B56ZwXatLkJEAQ-/0/1769919403353?e=1775088000&v=beta&t=8j2lkrX_mk0wXK8If-QtPfdPrCsFWgYw6VpwSPMJn34';
   return (
-    <nav className="sticky top-0 z-50 w-full bg-brand-cream/95 backdrop-blur-md border-b border-brand-slate/10">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-24 items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-opacity hover:opacity-90">
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
           </div>
@@ -54,8 +54,9 @@ export function Navbar() {
           </div>
         </div>
       </div>
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-brand-cream border-b border-brand-slate/10 animate-in slide-in-from-top duration-300">
+        <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-300">
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navLinks.map((link) => (
               <Link
