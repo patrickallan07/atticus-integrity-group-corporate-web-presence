@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -45,6 +45,12 @@ export function ContactPage() {
       message: '',
     },
   });
+  // UX Refinement: Reset scroll position when success message appears
+  useEffect(() => {
+    if (isSuccess) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [isSuccess]);
   const onSubmit = useCallback(async (values: FormValues) => {
     setIsSubmitting(true);
     try {
@@ -54,7 +60,7 @@ export function ContactPage() {
       });
       setIsSuccess(true);
       toast.success('Inquiry Received', {
-        description: "Your inquiry has been logged. I will review the details and respond personally within one business day.",
+        description: "I have received your information and will personally review the details to respond within one business day.",
       });
       form.reset();
     } catch (error) {
@@ -79,13 +85,13 @@ export function ContactPage() {
           </div>
           <h1 className="text-4xl font-display font-bold text-brand-green mb-4">Inquiry Received</h1>
           <p className="text-brand-slate-light text-lg mb-10 leading-relaxed">
-            Thank you for reaching out. I have received your information and will personally review the requirements to ensure the best possible advisory support. Expect a response shortly.
+            Thank you for reaching out. I have received your information and will personally review the requirements to ensure the best possible advisory support. Expect a response from me shortly.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" className="bg-brand-green text-white px-8">
+            <Button asChild size="lg" className="bg-brand-green text-white px-8 h-12 border-none">
               <Link to="/">Return to Home</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-brand-blue/30 text-brand-green" onClick={handleReset}>
+            <Button variant="outline" size="lg" className="border-brand-blue/30 text-brand-green h-12" onClick={handleReset}>
               Send Another Message
             </Button>
           </div>
@@ -101,7 +107,7 @@ export function ContactPage() {
             <div>
               <h1 className="text-display mb-6">Get in <span className="text-brand-blue">Touch</span></h1>
               <p className="text-body max-w-lg mb-8">
-                Whether you require a comprehensive HR audit, specialized recruitment support, or professional bookkeeping, Atticus Integrity is ready to discuss how to bring clarity to your business operations.
+                Whether you require a comprehensive HR audit, specialized recruitment support, or professional bookkeeping, I am ready to discuss how Atticus Integrity can bring clarity to your business operations.
               </p>
             </div>
             <div className="space-y-8">
@@ -210,7 +216,7 @@ export function ContactPage() {
                       <FormLabel className="text-brand-green font-semibold">Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="How can Atticus Integrity assist your business today?"
+                          placeholder="How can I assist your business today?"
                           className="min-h-[150px] bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green resize-none"
                           {...field}
                         />
