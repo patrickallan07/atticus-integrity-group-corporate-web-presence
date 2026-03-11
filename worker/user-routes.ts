@@ -16,7 +16,7 @@ export function userRoutes(app: Hono<{ Bindings: Env }>) {
     try {
       const body = await c.req.json() as Partial<ContactInquiry>;
       if (!body.name?.trim() || !body.email?.trim() || !body.message?.trim()) {
-        return bad(c, 'Missing required inquiry fields (name, email, message)');
+        return bad(c, 'Required fields missing: name, email, and message are mandatory.');
       }
       const inquiry: ContactInquiry = {
         id: crypto.randomUUID(),
@@ -31,21 +31,26 @@ export function userRoutes(app: Hono<{ Bindings: Env }>) {
       return ok(c, created);
     } catch (error) {
       console.error('API Contact Error:', error);
-      return bad(c, 'Failed to process inquiry');
+      return bad(c, 'The inquiry could not be processed at this time.');
     }
   });
   /**
    * ADMIN: LIST INQUIRIES
-   * Retrieve submitted inquiries (protected by internal logic/environment in production).
+   * Retrieve submitted inquiries for professional review.
    */
   app.get('/api/contacts', async (c) => {
-    const cursor = c.req.query('cursor');
-    const limit = c.req.query('limit');
-    const page = await ContactInquiryEntity.list(
-      c.env,
-      cursor ?? null,
-      limit ? Math.max(1, Number(limit)) : 50
-    );
-    return ok(c, page);
+    try {
+      const cursor = c.req.query('cursor');
+      const limit = c.req.query('limit');
+      const page = await ContactInquiryEntity.list(
+        c.env,
+        cursor ?? null,
+        limit ? Math.max(1, Number(limit)) : 50
+      );
+      return ok(c, page);
+    } catch (error) {
+      console.error('API List Contacts Error:', error);
+      return bad(c, 'Could not retrieve inquiries.');
+    }
   });
 }
