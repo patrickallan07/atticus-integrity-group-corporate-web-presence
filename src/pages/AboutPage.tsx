@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Shield, Target, Award, User } from 'lucide-react';
 export function AboutPage() {
-  const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 12 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='4' rx='0.24' fill='%23F5F5F0'/%3E%3Ctext x='6' y='2.2' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='0.8' letter-spacing='0.01em' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3C/svg%3E`;
-  const founderImageUrl = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop';
+  const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 120 40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='120' height='40' rx='2' fill='%23F5F5F0'/%3E%3Cpath d='M20 20 L30 10 L30 30 Z' fill='%231F4A38'/%3E%3Ctext x='60' y='24' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='8' letter-spacing='0.1' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3Cpath d='M90 10 L100 20 L90 30 Z' fill='%231F4A38'/%3E%3C/svg%3E`;
+  const founderImageUrl = 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400&fit=crop&dpr=2';
   return (
     <CorporateLayout>
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
