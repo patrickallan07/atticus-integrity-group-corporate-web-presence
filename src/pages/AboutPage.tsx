@@ -11,7 +11,7 @@ export function AboutPage() {
           <img
             src={logoUrl}
             alt=""
-            className="absolute -top-12 -right-12 w-[600px] aspect-[2/1] object-cover object-center opacity-[0.04] rotate-12 grayscale scale-110"
+            className="absolute -top-12 -right-12 w-[600px] aspect-[2/1] object-cover object-center opacity-[0.04] rotate-12 grayscale scale-75"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-4">

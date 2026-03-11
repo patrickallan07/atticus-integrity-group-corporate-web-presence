@@ -26,7 +26,7 @@ export function Navbar() {
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"
-                  className="h-full w-full transition-all duration-700 object-cover object-center scale-110 drop-shadow-md"
+                  className="h-full w-full transition-all duration-700 object-cover object-center scale-75 drop-shadow-md"
                 />
               </div>
             </Link>

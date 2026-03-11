@@ -14,7 +14,7 @@ export function Footer() {
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"
-                  className="h-full w-full object-cover object-center scale-110"
+                  className="h-full w-full object-cover object-center scale-75"
                 />
               </div>
             </div>
