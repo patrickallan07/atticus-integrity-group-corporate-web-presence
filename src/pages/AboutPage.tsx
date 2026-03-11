@@ -4,6 +4,7 @@ import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Shield, Target, Award, User } from 'lucide-react';
 export function AboutPage() {
   const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 12 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='4' rx='0.24' fill='%23F5F5F0'/%3E%3Ctext x='6' y='2.2' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='0.8' letter-spacing='0.01em' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3C/svg%3E`;
+  const founderImageUrl = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop';
   return (
     <CorporateLayout>
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
@@ -50,8 +51,12 @@ export function AboutPage() {
             </div>
             <div className="bg-brand-cream/30 p-8 md:p-12 rounded-3xl border border-brand-slate/5">
               <div className="flex flex-col items-center text-center space-y-6">
-                <div className="w-32 h-32 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green border-2 border-brand-green/20 overflow-hidden">
-                  <User size={64} className="opacity-40" />
+                <div className="w-40 h-40 rounded-full border-4 border-white shadow-soft overflow-hidden">
+                  <img 
+                    src={founderImageUrl} 
+                    alt="Founder & Principal" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-2xl font-display font-bold text-brand-green">Founder & Principal</h3>
