@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Mail, Phone, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, Send, Loader2, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
@@ -31,9 +31,11 @@ const formSchema = z.object({
   service: z.enum(['hr', 'financial', 'general']),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
+type FormValues = z.infer<typeof formSchema>;
 export function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const form = useForm<z.infer<typeof formSchema>>({
+  const [isSuccess, setIsSuccess] = useState(false);
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
@@ -43,26 +45,47 @@ export function ContactPage() {
       message: '',
     },
   });
-  const onSubmit = useCallback(async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = useCallback(async (values: FormValues) => {
     setIsSubmitting(true);
     try {
       await api("/api/contact", {
         method: "POST",
         body: JSON.stringify(values)
       });
+      setIsSuccess(true);
       toast.success('Inquiry Received', {
-        description: "Your inquiry has been received. Atticus Integrity will respond shortly.",
+        description: "Your inquiry has been logged. I will review the details and respond personally within one business day.",
       });
       form.reset();
     } catch (error) {
       toast.error('Submission Error', {
-        description: error instanceof Error ? error.message : 'An unexpected error occurred. Please try again.'
+        description: error instanceof Error ? error.message : 'A technical error occurred. Please try again or call the direct line.'
       });
-      console.error('Contact error:', error);
+      console.error('Contact submission error:', error);
     } finally {
       setIsSubmitting(false);
     }
   }, [form]);
+  if (isSuccess) {
+    return (
+      <CorporateLayout>
+        <div className="bg-brand-cream min-h-[70vh] flex items-center">
+          <div className="max-w-xl mx-auto px-4 text-center py-16">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-green/10 text-brand-green mb-8">
+              <CheckCircle2 size={48} />
+            </div>
+            <h1 className="text-4xl font-display font-bold text-brand-green mb-4">Inquiry Received</h1>
+            <p className="text-brand-slate-light text-lg mb-10 leading-relaxed">
+              Thank you for reaching out. I have received your information and will personally review the requirements to ensure the best possible advisory support. Expect a response shortly.
+            </p>
+            <Button asChild size="lg" className="bg-brand-green text-white px-8">
+              <a href="/">Return to Home</a>
+            </Button>
+          </div>
+        </div>
+      </CorporateLayout>
+    );
+  }
   return (
     <CorporateLayout>
       <div className="bg-brand-cream min-h-screen">
