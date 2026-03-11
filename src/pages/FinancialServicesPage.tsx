@@ -8,12 +8,12 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 const financialServices = [
   {
     title: "Full-Cycle Bookkeeping",
-    description: "Immaculate maintenance of your general ledger, accounts payable, and accounts receivable.",
+    description: "Immaculate maintenance of general ledger, accounts payable, and accounts receivable systems.",
     icon: Calculator
   },
   {
     title: "Payroll Management",
-    description: "End-to-end processing including Superannuation, Single Touch Payroll (STP), and WorkCover.",
+    description: "End-to-end processing including Superannuation, Single Touch Payroll (STP), and WorkCover compliance.",
     icon: Clock
   },
   {
@@ -28,17 +28,17 @@ const financialServices = [
   },
   {
     title: "Cash Flow Forecasting",
-    description: "Strategic projections to help you plan for growth and manage seasonal business cycles.",
+    description: "Strategic projections to help plan for growth and manage seasonal business cycles effectively.",
     icon: PieChart
   },
   {
     title: "Bank Reconciliation",
-    description: "Daily or weekly reconciliation of accounts to ensure your financial data is always current.",
+    description: "Daily or weekly reconciliation of accounts to ensure financial data is always current and reliable.",
     icon: Landmark
   }
 ];
 export function FinancialServicesPage() {
-  const logoUrl = "https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY";
+  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
       <section className="relative bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
@@ -66,7 +66,7 @@ export function FinancialServicesPage() {
               Atticus Integrity <span className="text-brand-blue">Financial</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
-              Numbers tell the story of your business. We ensure that story is accurate, transparent, and formatted to support informed decision-making at every level.
+              Numbers tell the story of a business. Atticus Integrity ensures that story is accurate, transparent, and formatted to support informed decision-making at every level.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
               <Link to="/contact">Get in Touch</Link>
@@ -107,7 +107,7 @@ export function FinancialServicesPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Absolute Clarity Over Your Finances</h2>
           <p className="text-brand-cream/80 mb-10 text-lg">
-            Stop guessing and start growing with structured financial reporting and impeccable bookkeeping.
+            Replace uncertainty with structured financial reporting and impeccable bookkeeping.
           </p>
           <Button asChild size="lg" className="bg-brand-blue text-white hover:bg-brand-blue/90 hover:scale-105 transition-transform h-14 px-10 font-bold border-none">
             <Link to="/contact">Get in Touch</Link>

@@ -6,7 +6,7 @@ import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 export function HomePage() {
-  const logoUrl = "https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY";
+  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
       <section className="relative min-h-[85vh] flex items-center bg-brand-cream overflow-hidden">
@@ -38,7 +38,7 @@ export function HomePage() {
               Navigating Your Business with <span className="text-brand-blue">Unwavering Integrity</span>
             </h1>
             <p className="text-body mb-10 max-w-2xl">
-              Atticus Integrity Group provides premium HR Advisory and Financial Services designed to foster trust, clarity, and sustainable growth for modern enterprises.
+              Atticus Integrity provides premium HR Advisory and Financial Services designed to foster trust, clarity, and sustainable growth for modern enterprises.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-brand-green hover:bg-brand-green/90 hover:scale-[1.02] transition-all text-white font-bold h-14 px-8 border-none shadow-soft">
@@ -77,7 +77,7 @@ export function HomePage() {
                   </div>
                   <CardContent className="p-8">
                     <p className="text-brand-slate-light mb-6 leading-relaxed">
-                      Transform your workplace culture with expert advisory on employee relations, compliance, and strategic HR management.
+                      Transform workplace culture with expert advisory on employee relations, compliance, and strategic HR management.
                     </p>
                     <div className="flex items-center text-brand-green font-bold group-hover:text-brand-blue transition-colors">
                       Learn More <ChevronRight size={18} className="ml-1" />
@@ -105,7 +105,7 @@ export function HomePage() {
                   </div>
                   <CardContent className="p-8">
                     <p className="text-brand-slate-light mb-6 leading-relaxed">
-                      Precision bookkeeping and financial reporting services to give you absolute clarity over your business performance.
+                      Precision bookkeeping and financial reporting services to provide absolute clarity over business performance.
                     </p>
                     <div className="flex items-center text-brand-green font-bold group-hover:text-brand-blue transition-colors">
                       Learn More <ChevronRight size={18} className="ml-1" />
@@ -126,9 +126,9 @@ export function HomePage() {
               </h2>
               <div className="space-y-6">
                 {[
-                  { title: "Bespoke Solutions", text: "We don't believe in one-size-fits-all. Every strategy is tailored to your unique business context." },
-                  { title: "Uncompromising Ethics", text: "Integrity is not just in our name; it's the foundation of every client interaction we have." },
-                  { title: "Data-Driven Insights", text: "Whether HR or Finance, our advice is backed by rigorous data and industry benchmarking." }
+                  { title: "Bespoke Solutions", text: "Atticus Integrity rejects one-size-fits-all approaches. Every strategy is tailored to the unique business context." },
+                  { title: "Uncompromising Ethics", text: "Integrity is not just a brand name; it's the foundation of every professional interaction." },
+                  { title: "Data-Driven Insights", text: "Whether HR or Finance, advisory insights are backed by rigorous data and industry benchmarking." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="shrink-0 h-8 w-8 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-xs">
@@ -155,7 +155,7 @@ export function HomePage() {
                   "Excellence is never an accident; it is always the result of high intention."
                 </p>
                 <div className="h-1 w-12 bg-brand-blue mb-2" />
-                <p className="text-brand-cream/80 text-xs font-bold uppercase tracking-widest">Atticus Leadership</p>
+                <p className="text-brand-cream/80 text-xs font-bold uppercase tracking-widest">Expert Insight</p>
               </div>
             </div>
           </div>

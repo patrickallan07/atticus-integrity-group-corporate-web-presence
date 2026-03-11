@@ -12,6 +12,7 @@ const navLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
   return (
     <nav className="sticky top-0 z-50 w-full bg-brand-cream/95 backdrop-blur-md border-b border-brand-slate/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +20,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY"
+                src={logoUrl}
                 alt="Atticus Integrity"
                 className="h-10 w-auto"
               />

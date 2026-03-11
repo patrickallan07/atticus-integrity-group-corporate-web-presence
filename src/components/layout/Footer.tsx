@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react';
 export function Footer() {
+  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
   return (
     <footer className="bg-brand-slate text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -9,13 +10,13 @@ export function Footer() {
           <div className="space-y-6">
             <div className="flex items-center">
               <img
-                src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY"
+                src={logoUrl}
                 alt="Atticus Integrity"
                 className="h-12 w-auto"
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
-              Providing premium advisory and financial services with integrity and excellence at our core. Your partner in professional growth.
+              Providing premium advisory and financial services with integrity and excellence at the core. A dedicated partner in professional growth and operational clarity.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="p-2 bg-brand-green rounded-full hover:bg-brand-blue transition-colors text-white" aria-label="LinkedIn">
@@ -48,7 +49,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="space-y-6">
-            <h4 className="text-brand-blue font-bold text-sm tracking-widest uppercase">Contact Us</h4>
+            <h4 className="text-brand-blue font-bold text-sm tracking-widest uppercase">Inquiries</h4>
             <ul className="space-y-4 text-sm text-slate-300">
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-green shrink-0" />

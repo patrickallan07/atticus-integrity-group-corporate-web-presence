@@ -67,7 +67,7 @@ export function ContactPage() {
               <div>
                 <h1 className="text-display mb-6">Get in <span className="text-brand-blue">Touch</span></h1>
                 <p className="text-body max-w-lg mb-8">
-                  Whether you need a full HR audit, recruitment support, or professional bookkeeping, our team is ready to discuss how we can bring integrity and clarity to your business.
+                  Whether you need a full HR audit, recruitment support, or professional bookkeeping, Atticus Integrity is ready to discuss how to bring integrity and clarity to your operations.
                 </p>
               </div>
               <div className="space-y-8">
@@ -76,7 +76,7 @@ export function ContactPage() {
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-green mb-1">Call Us</h4>
+                    <h4 className="font-bold text-brand-green mb-1">Call</h4>
                     <p className="text-brand-slate-light text-lg font-semibold tracking-tight">1 (888) 757-3770</p>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export function ContactPage() {
                         <FormLabel className="text-brand-green">Message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="How can we help your business today?"
+                            placeholder="How can Atticus Integrity help your business today?"
                             className="min-h-[150px] bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green resize-none"
                             {...field}
                           />

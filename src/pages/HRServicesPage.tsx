@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: "HR Compliance",
-    description: "Ensuring your business meets all Modern Award requirements, Fair Work Act standards, and safety regulations.",
+    description: "Ensuring business operations meet all Modern Award requirements, Fair Work Act standards, and safety regulations.",
     icon: FileCheck
   },
   {
@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "Leadership Coaching",
-    description: "Tailored development programs for executives and middle management to build high-performance teams.",
+    description: "Tailored development programs for executives and management to build high-performance organizations.",
     icon: GraduationCap
   },
   {
@@ -43,7 +43,7 @@ const services = [
   }
 ];
 export function HRServicesPage() {
-  const logoUrl = "https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY";
+  const logoUrl = "https://placehold.co/600x200/1F4A38/FFFFFF/png?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
@@ -71,7 +71,7 @@ export function HRServicesPage() {
               Atticus Integrity <span className="text-brand-blue">HR Advisory</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
-              People are your greatest asset. We help you manage, protect, and empower your workforce through professional advisory services that blend empathy with legal precision.
+              People are the greatest asset. Atticus Integrity helps you manage, protect, and empower your workforce through professional advisory services that blend empathy with legal precision.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
               <Link to="/contact">Get in Touch</Link>
@@ -112,7 +112,7 @@ export function HRServicesPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Ready to Optimize Your Workplace?</h2>
           <p className="text-brand-cream/80 mb-10 text-lg">
-            Our advisors are ready to help you navigate complex employee situations with confidence and integrity.
+            Expert guidance is available to help you navigate complex employee situations with confidence and integrity.
           </p>
           <Button asChild size="lg" className="bg-white text-brand-green hover:bg-brand-cream hover:scale-105 transition-transform h-14 px-10 font-bold border-none">
             <Link to="/contact">Get in Touch</Link>
