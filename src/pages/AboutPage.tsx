@@ -8,10 +8,10 @@ export function AboutPage() {
     <>
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-          <img 
-            src={logoUrl} 
-            alt="" 
-            className="absolute -top-12 -right-12 w-[600px] aspect-[2/1] object-cover object-center opacity-[0.04] rotate-12 grayscale" 
+          <img
+            src={logoUrl}
+            alt=""
+            className="absolute -top-12 -right-12 w-[600px] aspect-[2/1] object-cover object-center opacity-[0.04] rotate-12 grayscale scale-110"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-4">

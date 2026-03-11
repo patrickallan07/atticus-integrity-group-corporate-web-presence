@@ -10,12 +10,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           <div className="space-y-10">
             <div className="flex items-center">
-              {/* Increased footer logo height for extreme prominence */}
               <div className="h-24 aspect-[2/1] overflow-hidden rounded-sm bg-white p-1 transition-transform hover:scale-105 duration-500 shadow-lg">
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"
-                  className="h-full w-full object-cover object-center scale-125"
+                  className="h-full w-full object-cover object-center scale-110"
                 />
               </div>
             </div>
