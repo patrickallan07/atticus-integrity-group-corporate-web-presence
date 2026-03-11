@@ -40,7 +40,7 @@
     @apply border-border;
     transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 200ms;
+    transition-duration: 250ms;
   }
   html {
     scroll-behavior: smooth;
@@ -53,7 +53,8 @@
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
   ::selection {
-    @apply bg-brand-green text-white;
+    background-color: #007BA7; /* Brand Cerulean */
+    color: #FFFFFF;
   }
 }
 @layer components {

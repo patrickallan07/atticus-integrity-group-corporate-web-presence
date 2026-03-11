@@ -6,11 +6,11 @@ import { Outlet } from 'react-router-dom';
 /**
  * The primary layout wrapper for the Atticus Integrity Group web presence.
  * Features a sticky navbar, footer, and automatic scroll-to-top functionality.
- * Standardizes the selection colors to the brand-specific Cerulean/Hunter Green scheme.
+ * Global selection styling is handled via src/index.css to ensure consistency.
  */
 export function CorporateLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-background selection:bg-brand-blue/30 selection:text-brand-green">
+    <div className="min-h-screen flex flex-col bg-background">
       <ScrollToTop />
       <Navbar />
       <main className="flex-1 w-full">

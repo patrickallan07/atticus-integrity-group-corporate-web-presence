@@ -23,7 +23,7 @@ export function AboutPage() {
             <div className="h-1 w-20 bg-brand-blue mb-8 rounded-full" />
             <h1 className="text-display mb-6">The Practice</h1>
             <p className="text-body max-w-3xl font-medium">
-              Atticus Integrity is an independent HR and workplace advisory practice and financial bookkeeping service dedicated to helping organizations achieve greater levels of organizational effectiveness and culture through objective, expert counsel.
+              Atticus Integrity is an independent HR and workplace advisory practice and financial bookkeeping service dedicated to helping organizations achieve greater levels of effectiveness and culture through objective, expert counsel.
             </p>
           </motion.div>
         </div>
