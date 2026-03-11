@@ -17,6 +17,7 @@ import { HRServicesPage } from '@/pages/HRServicesPage';
 import { FinancialServicesPage } from '@/pages/FinancialServicesPage';
 import { AboutPage } from '@/pages/AboutPage';
 import { ContactPage } from '@/pages/ContactPage';
+import { CorporateLayout } from '@/components/layout/CorporateLayout';
 enableMapSet();
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,28 +31,30 @@ const queryClient = new QueryClient({
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <CorporateLayout />,
     errorElement: <RouteErrorBoundary />,
-  },
-  {
-    path: "/hr-advisory",
-    element: <HRServicesPage />,
-    errorElement: <RouteErrorBoundary />,
-  },
-  {
-    path: "/financial-services",
-    element: <FinancialServicesPage />,
-    errorElement: <RouteErrorBoundary />,
-  },
-  {
-    path: "/about",
-    element: <AboutPage />,
-    errorElement: <RouteErrorBoundary />,
-  },
-  {
-    path: "/contact",
-    element: <ContactPage />,
-    errorElement: <RouteErrorBoundary />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "hr-advisory",
+        element: <HRServicesPage />,
+      },
+      {
+        path: "financial-services",
+        element: <FinancialServicesPage />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+    ],
   },
 ]);
 const container = document.getElementById('root');
