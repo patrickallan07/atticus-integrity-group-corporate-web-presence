@@ -114,7 +114,7 @@ export function AboutPage() {
             </h2>
             <div className="max-w-2xl mx-auto text-brand-cream/80 leading-relaxed text-lg font-medium">
               <p>
-                Whether the engagement involves a deep-dive HR audit, precision bookkeeping, or sensitive leadership counsel, the work is defined by a single, unwavering standard: Professional Integrity.
+                Whether the engagement involves a deep-dive HR audit, precision bookkeeping, or sensitive leadership counsel, the work of Atticus Integrity is defined by a single, unwavering standard: Professional Integrity.
               </p>
             </div>
             <div className="mt-12">

@@ -16,14 +16,12 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Container height reduced as per request: h-32 on mobile, h-40 on desktop */}
-        <div className="flex justify-between h-32 md:h-40 items-center transition-all duration-500 ease-in-out">
+        <div className="flex justify-between h-32 md:h-40 items-center transition-all duration-500 ease-in-out relative">
           <div className="flex items-center h-full overflow-visible relative">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex items-center transition-transform hover:scale-[1.02] active:scale-95 z-10"
             >
-              {/* Logo height remains larger (h-40/h-48) creating the overflow effect */}
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
@@ -66,9 +64,9 @@ export function Navbar() {
           </div>
         </div>
       </div>
-      {/* Mobile Menu - Offset adjusted for new navbar height */}
+      {/* Mobile Menu - Positioned top-full to ensure it starts exactly below the navbar border */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-500 absolute w-full shadow-2xl z-[60] overflow-y-auto max-h-[calc(100vh-8rem)]">
+        <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-300 absolute top-full left-0 w-full shadow-2xl z-[60] overflow-y-auto max-h-[calc(100vh-8rem)]">
           <div className="px-6 pt-4 pb-12 space-y-1">
             {navLinks.map((link) => (
               <Link
