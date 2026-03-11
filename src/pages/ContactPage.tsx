@@ -94,7 +94,7 @@ export function ContactPage() {
                 <h4 className="font-bold text-brand-green mb-2">Service Availability</h4>
                 <div className="grid grid-cols-2 gap-y-2 text-sm text-brand-slate-light">
                   <span>Mon - Fri:</span>
-                  <span className="text-brand-green font-semibold">9:00 AM - 5:30 PM (EST)</span>
+                  <span className="text-brand-green font-semibold">9:00 AM - 5:30 PM (CST)</span>
                   <span>Sat - Sun:</span>
                   <span className="text-brand-green font-semibold">Closed</span>
                 </div>
