@@ -12,17 +12,17 @@ const navLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_100_100/B56ZwXatLkJEAQ-/0/1769919403353?e=1775088000&v=beta&t=8j2lkrX_mk0wXK8If-QtPfdPrCsFWgYw6VpwSPMJn34';
+  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQEVVrYn60iyEA/company-logo_200_200/B56Zzbr8C2IcAI-/0/1773212255196/atticus_integrity_logo?e=1775088000&v=beta&t=os5WqGOOk_ZynAh-ZLf7CPzYUIfMuJaFjH531pIqMJg';
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
+        <div className="flex justify-between h-40 items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-opacity hover:opacity-90">
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                className="h-16 w-auto"
+                className="h-32 w-auto"
               />
             </Link>
           </div>
@@ -49,7 +49,7 @@ export function Navbar() {
               className="text-brand-green hover:text-brand-blue transition-colors p-2"
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
           </div>
         </div>
@@ -75,7 +75,7 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-4 px-3">
-              <Button asChild className="w-full bg-brand-green text-white border-none" onClick={() => setIsOpen(false)}>
+              <Button asChild className="w-full bg-brand-green text-white border-none h-12" onClick={() => setIsOpen(false)}>
                 <Link to="/contact">Get in Touch</Link>
               </Button>
             </div>

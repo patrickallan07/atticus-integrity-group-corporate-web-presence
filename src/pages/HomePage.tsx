@@ -5,7 +5,7 @@ import { ChevronRight, ShieldCheck, TrendingUp, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 export function HomePage() {
-  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_100_100/B56ZwXatLkJEAQ-/0/1769919403353?e=1775088000&v=beta&t=8j2lkrX_mk0wXK8If-QtPfdPrCsFWgYw6VpwSPMJn34';
+  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQEVVrYn60iyEA/company-logo_200_200/B56Zzbr8C2IcAI-/0/1773212255196/atticus_integrity_logo?e=1775088000&v=beta&t=os5WqGOOk_ZynAh-ZLf7CPzYUIfMuJaFjH531pIqMJg';
   return (
     <>
       <section className="relative min-h-[85vh] flex items-center bg-brand-cream overflow-hidden">

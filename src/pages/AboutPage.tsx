@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Target, Award, User, Quote } from 'lucide-react';
 export function AboutPage() {
-  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_100_100/B56ZwXatLkJEAQ-/0/1769919403353?e=1775088000&v=beta&t=8j2lkrX_mk0wXK8If-QtPfdPrCsFWgYw6VpwSPMJn34';
+  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQEVVrYn60iyEA/company-logo_200_200/B56Zzbr8C2IcAI-/0/1773212255196/atticus_integrity_logo?e=1775088000&v=beta&t=os5WqGOOk_ZynAh-ZLf7CPzYUIfMuJaFjH531pIqMJg';
   const founderImageUrl = 'https://media.licdn.com/dms/image/v2/D5603AQEWmSSUztvCGQ/profile-displayphoto-scale_200_200/B56ZuafSA5IcAg-/0/1767823450870?e=1775088000&v=beta&t=HaWw9j7erA-u-6wsjFtYkCcCSEtAm9Dzw0HQO44OMPs';
   return (
     <>
@@ -41,8 +41,8 @@ export function AboutPage() {
                   { icon: Award, title: "Integrity", text: "A commitment to ethical practice in every engagement and interaction." },
                   { icon: User, title: "Experience", text: "Direct access to senior-level expertise without traditional firm overhead." }
                 ].map((item, idx) => (
-                  <motion.div 
-                    key={idx} 
+                  <motion.div
+                    key={idx}
                     className="space-y-3"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export function AboutPage() {
                 ))}
               </div>
             </div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
