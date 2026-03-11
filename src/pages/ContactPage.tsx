@@ -45,7 +45,6 @@ export function ContactPage() {
       message: '',
     },
   });
-  // UX Refinement: Reset scroll position when success message appears
   useEffect(() => {
     if (isSuccess) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -215,18 +214,18 @@ export function ContactPage() {
                     <FormItem>
                       <FormLabel className="text-brand-green font-semibold">Message</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="How can I assist your business today?" 
+                        <Textarea
+                          placeholder="How can I assist your business today?"
                           className="min-h-[150px] bg-brand-cream/30 border-brand-slate/10 focus-visible:ring-brand-green resize-none"
-                          {...field} 
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full h-14 bg-brand-green hover:bg-brand-green/90 hover:scale-[1.01] active:scale-95 transition-all text-white text-lg font-bold border-none shadow-lg"
                 >

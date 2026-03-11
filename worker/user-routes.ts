@@ -56,8 +56,8 @@ export function userRoutes(app: Hono<{ Bindings: Env }>) {
       const limitRaw = c.req.query('limit');
       const limit = limitRaw ? Math.min(100, Math.max(1, Number(limitRaw))) : 50;
       const page = await ContactInquiryEntity.list(
-        c.env, 
-        cursor ?? null, 
+        c.env,
+        cursor ?? null,
         limit
       );
       return ok(c, page);
