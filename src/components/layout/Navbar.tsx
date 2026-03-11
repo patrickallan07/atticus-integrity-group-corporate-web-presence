@@ -17,15 +17,12 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center">
               <img
                 src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY"
                 alt="Atticus Integrity"
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-display font-bold tracking-tight text-brand-green hidden sm:block">
-                ATTICUS <span className="text-brand-blue">INTEGRITY</span>
-              </span>
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">

@@ -7,15 +7,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img
                 src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY"
                 alt="Atticus Integrity"
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
-              <span className="text-xl font-display font-bold tracking-tight text-white">
-                ATTICUS <span className="text-brand-blue">INTEGRITY</span>
-              </span>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
               Providing premium advisory and financial services with integrity and excellence at our core. Your partner in professional growth.
