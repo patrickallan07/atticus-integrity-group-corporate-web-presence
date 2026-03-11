@@ -46,12 +46,12 @@ export function ContactPage() {
   const onSubmit = useCallback(async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      await api("/api/contact", { 
-        method: "POST", 
-        body: JSON.stringify(values) 
+      await api("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(values)
       });
-      toast.success('Message Sent Successfully', {
-        description: "We have received your inquiry and will be in touch shortly.",
+      toast.success('Inquiry Received', {
+        description: "Your inquiry has been received. Atticus Integrity will be in touch shortly.",
       });
       form.reset();
     } catch (error) {
