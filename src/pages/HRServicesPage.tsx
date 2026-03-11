@@ -60,7 +60,7 @@ export function HRServicesPage() {
               Atticus Integrity <span className="text-brand-blue">HR</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
-              Atticus Integrity provides independent human resources consulting and workplace advisory services focused on organizational effectiveness, employee engagement, culture development, and HR compliance. Our strategic approach helps align people, processes, and performance with business objectives to drive sustainable growth and a high-performing workplace.
+              Atticus Integrity provides independent human resources consulting and workplace advisory services focused on organizational effectiveness, employee engagement, culture development, and HR compliance. This strategic approach helps align people, processes, and performance with business objectives to drive sustainable growth and a high-performing workplace.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
               <Link to="/contact">Discuss Requirements</Link>
