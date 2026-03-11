@@ -4,18 +4,19 @@ import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react';
 export function Footer() {
   const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQEVVrYn60iyEA/company-logo_200_200/B56Zzbr8C2IcAI-/0/1773212255196/atticus_integrity_logo?e=1775088000&v=beta&t=os5WqGOOk_ZynAh-ZLf7CPzYUIfMuJaFjH531pIqMJg';
   return (
-    <footer className="bg-brand-slate text-white pt-16 pb-8">
+    <footer className="bg-brand-slate text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          <div className="space-y-8">
             <div className="flex items-center">
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                className="h-20 w-auto"
+                // Scaled footer logo to h-32 to match new brand impact standards
+                className="h-32 w-auto object-contain transition-transform hover:scale-105"
               />
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
+            <p className="text-slate-300 text-sm leading-relaxed max-w-xs font-medium">
               Atticus Integrity is an independent HR and workplace advisory practice dedicated to organizational effectiveness and culture.
             </p>
             <div className="flex space-x-4">
@@ -23,51 +24,61 @@ export function Footer() {
                 href="https://www.linkedin.com/company/atticus-integrity/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-brand-green rounded-full hover:bg-brand-blue transition-colors text-white"
+                className="p-3 bg-brand-green/20 rounded-xl hover:bg-brand-blue transition-all text-white border border-white/5"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={18} />
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
-          <div className="space-y-6">
-            <h4 className="text-brand-blue font-bold text-sm tracking-widest uppercase">The Practice</h4>
-            <ul className="space-y-4">
-              <li><Link to="/" className="text-slate-300 hover:text-white text-sm">Home</Link></li>
-              <li><Link to="/about" className="text-slate-300 hover:text-white text-sm">The Practice</Link></li>
-              <li><Link to="/hr-advisory" className="text-slate-300 hover:text-white text-sm">HR Advisory</Link></li>
-              <li><Link to="/financial-services" className="text-slate-300 hover:text-white text-sm">Financial Services</Link></li>
+          <div className="space-y-8">
+            <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">The Practice</h4>
+            <ul className="space-y-5">
+              <li><Link to="/" className="text-slate-300 hover:text-white transition-colors text-sm font-semibold">Home</Link></li>
+              <li><Link to="/about" className="text-slate-300 hover:text-white transition-colors text-sm font-semibold">The Practice</Link></li>
+              <li><Link to="/hr-advisory" className="text-slate-300 hover:text-white transition-colors text-sm font-semibold">HR Advisory</Link></li>
+              <li><Link to="/financial-services" className="text-slate-300 hover:text-white transition-colors text-sm font-semibold">Financial Services</Link></li>
             </ul>
           </div>
-          <div className="space-y-6">
-            <h4 className="text-brand-blue font-bold text-sm tracking-widest uppercase">HR Advisory</h4>
-            <ul className="space-y-4">
+          <div className="space-y-8">
+            <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">HR Advisory</h4>
+            <ul className="space-y-5">
               {['Employee Relations', 'HR Compliance', 'Leadership Counsel', 'Workplace Advisory'].map((item) => (
                 <li key={item}>
-                  <Link to="/hr-advisory" className="text-slate-300 hover:text-brand-blue transition-colors text-sm flex items-center gap-2">
-                    <ArrowRight size={14} className="text-brand-blue" /> {item}
+                  <Link to="/hr-advisory" className="text-slate-300 hover:text-brand-blue transition-all text-sm font-semibold flex items-center gap-2 group">
+                    <ArrowRight size={14} className="text-brand-blue transition-transform group-hover:translate-x-1" /> {item}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="space-y-6">
-            <h4 className="text-brand-blue font-bold text-sm tracking-widest uppercase">Contact</h4>
-            <ul className="space-y-4 text-sm text-slate-300">
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-brand-green shrink-0" />
-                <span className="font-medium">1 (888) 757-3770</span>
+          <div className="space-y-8">
+            <h4 className="text-brand-blue font-bold text-xs tracking-[0.2em] uppercase">Contact</h4>
+            <ul className="space-y-6 text-sm text-slate-300">
+              <li className="flex items-start gap-4">
+                <div className="p-2 bg-brand-green/10 rounded-lg text-brand-green">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Direct Line</p>
+                  <span className="font-bold text-white text-base">1 (888) 757-3770</span>
+                </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-brand-green shrink-0" />
-                <span>info@atticusintegrity.com</span>
+              <li className="flex items-start gap-4">
+                <div className="p-2 bg-brand-green/10 rounded-lg text-brand-green">
+                  <Mail size={18} />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Email Inquiry</p>
+                  <span className="font-medium text-white">info@atticusintegrity.com</span>
+                </div>
               </li>
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] tracking-wide text-slate-500 font-bold uppercase">
           <p>© 2025 Atticus Integrity Group, LLC. All rights reserved.</p>
-          <div className="flex gap-8">
+          <div className="flex gap-10">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
