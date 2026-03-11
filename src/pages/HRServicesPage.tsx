@@ -51,15 +51,15 @@ export function HRServicesPage() {
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
         {/* Brand Watermark Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-          <img 
-            src={logoUrl} 
-            alt="" 
-            className="absolute -top-12 -right-12 w-[500px] opacity-[0.03] rotate-12 grayscale" 
+          <img
+            src={logoUrl}
+            alt=""
+            className="absolute -top-12 -right-12 w-[500px] opacity-[0.03] rotate-12 grayscale"
           />
-          <img 
-            src={logoUrl} 
-            alt="" 
-            className="absolute -bottom-16 -left-12 w-[600px] opacity-[0.03] -rotate-12 grayscale" 
+          <img
+            src={logoUrl}
+            alt=""
+            className="absolute -bottom-16 -left-12 w-[600px] opacity-[0.03] -rotate-12 grayscale"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -76,7 +76,7 @@ export function HRServicesPage() {
               People are your greatest asset. We help you manage, protect, and empower your workforce through professional advisory services that blend empathy with legal precision.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
-              <Link to="/contact">Request an HR Audit</Link>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
           </motion.div>
         </div>
@@ -117,7 +117,7 @@ export function HRServicesPage() {
             Our advisors are ready to help you navigate complex employee situations with confidence and integrity.
           </p>
           <Button asChild size="lg" className="bg-white text-brand-green hover:bg-brand-cream hover:scale-105 transition-transform h-14 px-10 font-bold border-none">
-            <Link to="/contact">Book a Consultation</Link>
+            <Link to="/contact">Get in Touch</Link>
           </Button>
         </div>
       </section>

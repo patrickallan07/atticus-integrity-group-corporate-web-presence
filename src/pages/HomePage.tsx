@@ -12,15 +12,15 @@ export function HomePage() {
       <section className="relative min-h-[85vh] flex items-center bg-brand-cream overflow-hidden">
         {/* Brand Watermark Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-          <img 
-            src={logoUrl} 
-            alt="" 
-            className="absolute -top-10 -right-20 w-[600px] opacity-[0.03] rotate-12 grayscale" 
+          <img
+            src={logoUrl}
+            alt=""
+            className="absolute -top-10 -right-20 w-[600px] opacity-[0.03] rotate-12 grayscale"
           />
-          <img 
-            src={logoUrl} 
-            alt="" 
-            className="absolute -bottom-20 -left-20 w-[800px] opacity-[0.03] -rotate-12 grayscale" 
+          <img
+            src={logoUrl}
+            alt=""
+            className="absolute -bottom-20 -left-20 w-[800px] opacity-[0.03] -rotate-12 grayscale"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">
@@ -42,7 +42,7 @@ export function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-brand-green hover:bg-brand-green/90 hover:scale-[1.02] transition-all text-white font-bold h-14 px-8 border-none shadow-soft">
-                <Link to="/contact">Discuss Your Strategy</Link>
+                <Link to="/contact">Get in Touch</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-brand-blue/30 text-brand-green hover:bg-brand-blue/5 h-14 px-8">
                 <a href="#divisions">Explore Divisions</a>

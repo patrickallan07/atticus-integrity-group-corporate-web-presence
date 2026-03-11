@@ -46,15 +46,15 @@ export function FinancialServicesPage() {
       <section className="relative bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
         {/* Brand Watermark Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-          <img 
-            src={logoUrl} 
-            alt="" 
-            className="absolute -top-16 -left-16 w-[600px] opacity-[0.03] -rotate-12 grayscale" 
+          <img
+            src={logoUrl}
+            alt=""
+            className="absolute -top-16 -left-16 w-[600px] opacity-[0.03] -rotate-12 grayscale"
           />
-          <img 
-            src={logoUrl} 
-            alt="" 
-            className="absolute top-0 right-0 w-[400px] opacity-[0.03] rotate-45 grayscale" 
+          <img
+            src={logoUrl}
+            alt=""
+            className="absolute top-0 right-0 w-[400px] opacity-[0.03] rotate-45 grayscale"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -71,7 +71,7 @@ export function FinancialServicesPage() {
               Numbers tell the story of your business. We ensure that story is accurate, transparent, and formatted to support informed decision-making at every level.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
-              <Link to="/contact">Get a Bookkeeping Quote</Link>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
           </motion.div>
         </div>
@@ -112,7 +112,7 @@ export function FinancialServicesPage() {
             Stop guessing and start growing with structured financial reporting and impeccable bookkeeping.
           </p>
           <Button asChild size="lg" className="bg-brand-blue text-white hover:bg-brand-blue/90 hover:scale-105 transition-transform h-14 px-10 font-bold border-none">
-            <Link to="/contact">Schedule a Review</Link>
+            <Link to="/contact">Get in Touch</Link>
           </Button>
         </div>
       </section>
