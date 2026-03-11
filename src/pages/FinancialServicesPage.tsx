@@ -54,7 +54,7 @@ export function FinancialServicesPage() {
               Atticus Integrity <span className="text-brand-blue">Financial</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
-              Atticus Integrity provides professional bookkeeping services designed to ensure your business story is accurate, transparent, and formatted for growth.
+              Atticus Integrity provides professional bookkeeping and small business accounting services that deliver accurate, transparent, and timely financial records. We help business owners improve cash flow visibility, stay compliant, and use clear financial reporting to make confident, growth-focused decisions.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
               <Link to="/contact">Get in Touch</Link>
