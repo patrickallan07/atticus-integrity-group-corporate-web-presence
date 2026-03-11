@@ -5,7 +5,6 @@ import { Calculator, BarChart3, PieChart, Landmark, Clock, FileText } from 'luci
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { ScrollToTop } from '@/components/ScrollToTop';
 const financialServices = [
   {
     title: "Full-Cycle Bookkeeping",
@@ -42,7 +41,6 @@ export function FinancialServicesPage() {
   const logoUrl = "https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
-      <ScrollToTop />
       <section className="relative bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
         {/* Brand Watermark Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">

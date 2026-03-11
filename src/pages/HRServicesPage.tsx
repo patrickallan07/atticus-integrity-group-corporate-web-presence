@@ -5,7 +5,6 @@ import { Users, FileCheck, Heart, GraduationCap, Gavel, ShieldAlert, Briefcase }
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { ScrollToTop } from '@/components/ScrollToTop';
 const services = [
   {
     title: "Workplace Advisory",
@@ -47,7 +46,6 @@ export function HRServicesPage() {
   const logoUrl = "https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
-      <ScrollToTop />
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
         {/* Brand Watermark Background Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
