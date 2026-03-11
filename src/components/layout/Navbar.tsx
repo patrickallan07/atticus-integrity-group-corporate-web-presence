@@ -16,14 +16,12 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Extreme scaling: h-48 on mobile, md:h-56 on desktop */}
         <div className="flex justify-between h-48 md:h-56 items-center transition-all duration-500 ease-in-out">
           <div className="flex items-center h-full py-4">
             <Link to="/" className="flex items-center transition-transform hover:scale-[1.02] active:scale-95">
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                // Logo scaling: h-32 on mobile, md:h-48 on desktop
                 className="h-32 md:h-48 w-auto transition-all duration-500 object-contain"
               />
             </Link>
@@ -37,8 +35,8 @@ export function Navbar() {
                   to={link.href}
                   className={cn(
                     "text-sm lg:text-base font-bold tracking-tight transition-colors hover:text-brand-blue relative py-2",
-                    location.pathname === link.href 
-                      ? "text-brand-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-blue after:rounded-full" 
+                    location.pathname === link.href
+                      ? "text-brand-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-blue after:rounded-full"
                       : "text-brand-slate"
                   )}
                 >
@@ -55,7 +53,7 @@ export function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-brand-green hover:text-brand-blue transition-colors p-3 rounded-xl bg-brand-cream/50"
+              className="text-brand-green hover:text-brand-blue transition-all p-3 rounded-xl bg-brand-cream/50 active:scale-90"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X size={32} /> : <Menu size={32} />}
@@ -65,15 +63,15 @@ export function Navbar() {
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-300 absolute w-full shadow-2xl">
-          <div className="px-6 pt-4 pb-10 space-y-2">
+        <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-500 absolute w-full shadow-2xl z-[60] overflow-y-auto max-h-[calc(100vh-12rem)]">
+          <div className="px-6 pt-4 pb-12 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "flex items-center justify-between px-4 py-5 rounded-xl text-lg font-bold transition-colors",
+                  "flex items-center justify-between px-4 py-4 rounded-xl text-lg font-bold transition-colors",
                   location.pathname === link.href
                     ? "bg-brand-green/5 text-brand-blue"
                     : "text-brand-slate hover:bg-brand-green/5 hover:text-brand-green"
@@ -83,8 +81,8 @@ export function Navbar() {
                 <ChevronRight size={20} className={location.pathname === link.href ? "text-brand-blue" : "text-brand-slate/20"} />
               </Link>
             ))}
-            <div className="pt-6">
-              <Button asChild className="w-full bg-brand-green text-white border-none h-16 text-lg font-bold shadow-lg" onClick={() => setIsOpen(false)}>
+            <div className="pt-6 px-4">
+              <Button asChild className="w-full bg-brand-green text-white border-none h-14 text-lg font-bold shadow-lg" onClick={() => setIsOpen(false)}>
                 <Link to="/contact">Get in Touch</Link>
               </Button>
             </div>

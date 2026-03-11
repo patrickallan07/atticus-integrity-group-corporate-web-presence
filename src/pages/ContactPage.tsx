@@ -77,36 +77,41 @@ export function ContactPage() {
     form.reset();
   };
   return (
-    <div className="bg-brand-cream min-h-screen flex flex-col justify-center">
+    <div className="bg-brand-cream min-h-[calc(100vh-14rem)] flex flex-col justify-center">
       <AnimatePresence mode="wait">
         {isSuccess ? (
-          <motion.div 
+          <motion.div
             key="success-screen"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="flex-1 flex items-center justify-center py-16 md:py-24"
+            className="flex-1 flex items-center justify-center py-20 md:py-32 bg-brand-cream"
           >
             <div className="max-w-xl mx-auto px-4 text-center">
-              <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-brand-green/10 text-brand-green mb-8 shadow-inner">
-                <CheckCircle2 size={56} className="text-brand-blue" />
-              </div>
+              <motion.div 
+                initial={{ rotate: -20, scale: 0 }}
+                animate={{ rotate: 0, scale: 1 }}
+                transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-brand-green/10 text-brand-green mb-10 shadow-glow"
+              >
+                <CheckCircle2 size={64} className="text-brand-blue" />
+              </motion.div>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-brand-green mb-6 tracking-tight">Inquiry Received</h1>
-              <p className="text-brand-slate-light text-lg mb-10 leading-relaxed font-medium">
+              <p className="text-brand-slate-light text-lg mb-12 leading-relaxed font-medium">
                 Thank you for reaching out. As the principal of Atticus Integrity, I personally review every inquiry to ensure we provide the most effective advisory support. I will be in contact with you shortly to discuss your requirements.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
-                <Button asChild size="lg" className="bg-brand-green text-white px-10 h-14 border-none shadow-lg hover:bg-brand-green/90 transition-all w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
+                <Button asChild size="lg" className="bg-brand-green text-white px-12 h-14 border-none shadow-lg hover:bg-brand-green/90 hover:scale-[1.03] transition-all w-full sm:w-auto font-bold">
                   <Link to="/">Return to Home</Link>
                 </Button>
-                <Button variant="ghost" size="lg" className="text-brand-green hover:bg-brand-blue/10 h-14 px-10 w-full sm:w-auto" onClick={handleReset}>
+                <Button variant="ghost" size="lg" className="text-brand-green hover:bg-brand-blue/10 h-14 px-10 w-full sm:w-auto font-semibold" onClick={handleReset}>
                   Send Another Message
                 </Button>
               </div>
             </div>
           </motion.div>
         ) : (
-          <motion.div 
+          <motion.div
             key="contact-form"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -127,7 +132,7 @@ export function ContactPage() {
                 </motion.div>
                 <div className="space-y-8">
                   <div className="flex items-start gap-4 group">
-                    <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue transition-colors group-hover:text-white">
+                    <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue transition-all group-hover:text-white shadow-sm">
                       <Phone size={24} />
                     </div>
                     <div>
@@ -136,7 +141,7 @@ export function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-4 group">
-                    <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue transition-colors group-hover:text-white">
+                    <div className="h-12 w-12 rounded-lg bg-brand-green/10 flex items-center justify-center text-brand-blue shrink-0 group-hover:bg-brand-blue transition-all group-hover:text-white shadow-sm">
                       <Mail size={24} />
                     </div>
                     <div>
@@ -158,7 +163,7 @@ export function ContactPage() {
                   </div>
                 </div>
               </div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}

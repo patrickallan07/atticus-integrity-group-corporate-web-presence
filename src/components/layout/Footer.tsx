@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react';
 export function Footer() {
   const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQEVVrYn60iyEA/company-logo_200_200/B56Zzbr8C2IcAI-/0/1773212255196/atticus_integrity_logo?e=1775088000&v=beta&t=os5WqGOOk_ZynAh-ZLf7CPzYUIfMuJaFjH531pIqMJg';
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-brand-slate text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,8 +13,7 @@ export function Footer() {
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                // Scaled footer logo to h-32 to match new brand impact standards
-                className="h-32 w-auto object-contain transition-transform hover:scale-105"
+                className="h-32 w-auto object-contain transition-transform hover:scale-105 duration-500"
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs font-medium">
@@ -24,7 +24,7 @@ export function Footer() {
                 href="https://www.linkedin.com/company/atticus-integrity/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-brand-green/20 rounded-xl hover:bg-brand-blue transition-all text-white border border-white/5"
+                className="p-3 bg-brand-green/20 rounded-xl hover:bg-brand-blue hover:scale-110 active:scale-95 transition-all text-white border border-white/5 shadow-sm"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -77,7 +77,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] tracking-wide text-slate-500 font-bold uppercase">
-          <p>© 2025 Atticus Integrity Group, LLC. All rights reserved.</p>
+          <p>© {currentYear} Atticus Integrity Group, LLC. All rights reserved.</p>
           <div className="flex gap-10">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
