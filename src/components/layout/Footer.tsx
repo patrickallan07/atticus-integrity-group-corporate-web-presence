@@ -12,7 +12,7 @@ export function Footer() {
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                className="h-10 w-auto"
+                className="h-14 w-auto"
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">

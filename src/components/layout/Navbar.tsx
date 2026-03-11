@@ -22,7 +22,7 @@ export function Navbar() {
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>
