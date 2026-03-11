@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Calculator, BarChart3, PieChart, Landmark, Clock, FileText } from 'lucide-react';
+import { Calculator, BarChart3, Landmark, Clock } from 'lucide-react';
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -22,23 +22,13 @@ const financialServices = [
     icon: BarChart3
   },
   {
-    title: "BAS & IAS Preparation",
-    description: "Timely and accurate preparation and lodgement of Business Activity Statements and Installment Activity Statements.",
-    icon: FileText
-  },
-  {
-    title: "Cash Flow Forecasting",
-    description: "Strategic projections to help plan for growth and manage seasonal business cycles effectively.",
-    icon: PieChart
-  },
-  {
     title: "Bank Reconciliation",
     description: "Daily or weekly reconciliation of accounts to ensure financial data is always current and reliable.",
     icon: Landmark
   }
 ];
 export function FinancialServicesPage() {
-  const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 12 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='4' rx='0.24' fill='%23F5F5F0'/%3E%3Ctext x='6' y='2.2' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='0.8' letter-spacing='0.01em' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3C/svg%3E`; // Persistent SVG brand logo (light: hunter green on cream for watermarks)
+  const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 12 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='4' rx='0.24' fill='%23F5F5F0'/%3E%3Ctext x='6' y='2.2' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='0.8' letter-spacing='0.01em' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3C/svg%3E`;
   return (
     <CorporateLayout>
       <section className="relative bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
@@ -76,7 +66,7 @@ export function FinancialServicesPage() {
       </section>
       <section className="py-24 bg-brand-cream/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {financialServices.map((service, idx) => (
               <motion.div
                 key={idx}
