@@ -1,6 +1,6 @@
 # Cloudflare Workers React Template
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/patrickallan07/atticus-integrity-group-corporate-web-presence)
 
 A production-ready full-stack starter template for building modern web applications with Cloudflare Workers. Features a React frontend with shadcn/ui, Tailwind CSS, and a robust backend using Hono, Durable Objects for persistent storage, and type-safe APIs shared between client and server.
 
@@ -108,7 +108,7 @@ For custom domain:
 1. Run `wrangler deploy`
 2. In Cloudflare Dashboard > Workers > Your Worker > Triggers > Add Custom Domain
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/patrickallan07/atticus-integrity-group-corporate-web-presence)
 
 **Type Generation**: After deploy, run `bun cf-typegen` to update `worker/env.d.ts`.
 
