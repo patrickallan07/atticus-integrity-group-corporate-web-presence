@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Linkedin, ArrowRight } from 'lucide-react';
 export function Footer() {
-  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_200_200/B56ZwXatLkJEAI-/0/1769919403353?e=1775088000&amp;v=beta&amp;t=dNGp0k3ZDkYZ4bPrCnw11SXSNMp4jy_L5HQOnWB_TD4';
+  const logoUrl = 'https://media.licdn.com/dms/image/v2/D560BAQH8iEjECEU6Fg/company-logo_100_100/B56ZwXatLkJEAQ-/0/1769919403353?e=1775088000&v=beta&t=8j2lkrX_mk0wXK8If-QtPfdPrCsFWgYw6VpwSPMJn34';
   return (
     <footer className="bg-brand-slate text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +12,7 @@ export function Footer() {
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
