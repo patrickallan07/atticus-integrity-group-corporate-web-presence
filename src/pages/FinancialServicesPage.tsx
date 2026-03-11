@@ -35,12 +35,12 @@ export function FinancialServicesPage() {
           <img
             src={logoUrl}
             alt=""
-            className="absolute -top-16 -left-16 w-[700px] opacity-[0.04] -rotate-12 grayscale"
+            className="absolute -top-16 -left-16 w-[700px] aspect-[2/1] object-cover object-center opacity-[0.04] -rotate-12 grayscale"
           />
           <img
             src={logoUrl}
             alt=""
-            className="absolute top-0 right-0 w-[500px] opacity-[0.04] rotate-45 grayscale"
+            className="absolute top-0 right-0 w-[500px] aspect-[2/1] object-cover object-center opacity-[0.04] rotate-45 grayscale"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

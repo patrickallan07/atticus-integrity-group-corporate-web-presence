@@ -10,11 +10,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="space-y-8">
             <div className="flex items-center">
-              <img
-                src={logoUrl}
-                alt="Atticus Integrity"
-                className="h-32 w-auto object-contain transition-transform hover:scale-105 duration-500"
-              />
+              <div className="h-20 aspect-[2/1] overflow-hidden rounded-sm bg-white/5 p-1 transition-transform hover:scale-105 duration-500">
+                <img
+                  src={logoUrl}
+                  alt="Atticus Integrity"
+                  className="h-full w-full object-cover object-center scale-125"
+                />
+              </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs font-medium">
               Atticus Integrity is an independent HR and workplace advisory practice dedicated to organizational effectiveness and culture.

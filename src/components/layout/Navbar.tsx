@@ -16,17 +16,19 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-32 md:h-40 items-center transition-all duration-500 ease-in-out relative">
+        <div className="flex justify-between h-24 md:h-28 items-center transition-all duration-500 ease-in-out relative">
           <div className="flex items-center h-full overflow-visible relative">
             <Link
               to="/"
               className="flex items-center transition-transform hover:scale-[1.02] active:scale-95 z-10"
             >
-              <img
-                src={logoUrl}
-                alt="Atticus Integrity"
-                className="h-40 md:h-48 w-auto transition-all duration-500 object-contain drop-shadow-sm"
-              />
+              <div className="h-16 md:h-20 aspect-[2/1] overflow-hidden rounded-sm">
+                <img
+                  src={logoUrl}
+                  alt="Atticus Integrity"
+                  className="h-full w-full transition-all duration-500 object-cover object-center scale-125 drop-shadow-sm"
+                />
+              </div>
             </Link>
           </div>
           {/* Desktop Navigation */}

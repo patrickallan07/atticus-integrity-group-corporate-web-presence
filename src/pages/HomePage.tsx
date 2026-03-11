@@ -10,8 +10,16 @@ export function HomePage() {
     <>
       <section className="relative min-h-[85vh] flex items-center bg-brand-cream overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-          <img src={logoUrl} alt="" className="absolute -top-10 -right-20 w-[700px] opacity-[0.04] rotate-12 grayscale" />
-          <img src={logoUrl} alt="" className="absolute -bottom-20 -left-20 w-[900px] opacity-[0.04] -rotate-12 grayscale" />
+          <img 
+            src={logoUrl} 
+            alt="" 
+            className="absolute -top-10 -right-20 w-[800px] aspect-[2/1] object-cover object-center opacity-[0.04] rotate-12 grayscale" 
+          />
+          <img 
+            src={logoUrl} 
+            alt="" 
+            className="absolute -bottom-20 -left-20 w-[1000px] aspect-[2/1] object-cover object-center opacity-[0.04] -rotate-12 grayscale" 
+          />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">
           <motion.div
