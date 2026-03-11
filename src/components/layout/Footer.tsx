@@ -19,7 +19,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs font-medium">
-              Atticus Integrity is an independent HR and workplace advisory practice led by Patrick McCullough, dedicated to organizational effectiveness and professional bookkeeping.
+              Atticus Integrity is an independent HR and workplace advisory practice dedicated to organizational effectiveness and professional bookkeeping.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
