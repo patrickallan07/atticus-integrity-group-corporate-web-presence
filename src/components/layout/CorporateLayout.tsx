@@ -6,7 +6,7 @@ interface CorporateLayoutProps {
 }
 export function CorporateLayout({ children }: CorporateLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-background selection:bg-brand-gold selection:text-brand-navy">
+    <div className="min-h-screen flex flex-col bg-background selection:bg-brand-blue/30 selection:text-brand-green">
       <Navbar />
       <main className="flex-1">
         {children}

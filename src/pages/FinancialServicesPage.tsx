@@ -5,6 +5,7 @@ import { Calculator, BarChart3, PieChart, Landmark, Clock, FileText } from 'luci
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { ScrollToTop } from '@/components/ScrollToTop';
 const financialServices = [
   {
     title: "Full-Cycle Bookkeeping",
@@ -40,19 +41,30 @@ const financialServices = [
 export function FinancialServicesPage() {
   return (
     <CorporateLayout>
-      <section className="bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+      <ScrollToTop />
+      <section className="relative bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
+        {/* Branded Triangle Motif */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-brand-blue/5 -rotate-12" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }} />
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-green/5 rotate-45" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }} />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
             <h1 className="text-display mb-6">
               Atticus Integrity <span className="text-brand-blue">Financial</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
               Numbers tell the story of your business. We ensure that story is accurate, transparent, and formatted to support informed decision-making at every level.
             </p>
-            <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm">
+            <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
               <Link to="/contact">Get a Bookkeeping Quote</Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="py-24 bg-brand-cream/20">
