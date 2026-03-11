@@ -18,10 +18,10 @@ export function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-3">
-              <img 
-                src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY" 
-                alt="Atticus Integrity Logo" 
-                className="h-10 w-auto object-contain"
+              <img
+                src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY"
+                alt="Atticus Integrity"
+                className="h-10 w-auto"
               />
               <span className="text-xl font-display font-bold tracking-tight text-brand-green hidden sm:block">
                 ATTICUS <span className="text-brand-blue">INTEGRITY</span>

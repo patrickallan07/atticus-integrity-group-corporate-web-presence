@@ -6,13 +6,22 @@ import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 export function HomePage() {
+  const logoUrl = "https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY";
   return (
     <CorporateLayout>
       <section className="relative min-h-[85vh] flex items-center bg-brand-cream overflow-hidden">
-        {/* Triangle Motif Background Elements */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-20 -right-20 w-[600px] h-[600px] bg-brand-green/5 rotate-12" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }} />
-          <div className="absolute -bottom-40 -left-20 w-[800px] h-[800px] bg-brand-blue/5 -rotate-12" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }} />
+        {/* Brand Watermark Background Elements */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
+          <img 
+            src={logoUrl} 
+            alt="" 
+            className="absolute -top-10 -right-20 w-[600px] opacity-[0.03] rotate-12 grayscale" 
+          />
+          <img 
+            src={logoUrl} 
+            alt="" 
+            className="absolute -bottom-20 -left-20 w-[800px] opacity-[0.03] -rotate-12 grayscale" 
+          />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">
           <motion.div

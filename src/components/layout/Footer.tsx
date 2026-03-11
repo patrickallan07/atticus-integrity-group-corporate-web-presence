@@ -8,10 +8,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <img 
-                src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY" 
-                alt="Atticus Integrity Logo" 
-                className="h-10 w-auto object-contain"
+              <img
+                src="https://placehold.co/400x100/1F4A38/FFFFFF?text=ATTICUS+INTEGRITY"
+                alt="Atticus Integrity"
+                className="h-10 w-auto"
               />
               <span className="text-xl font-display font-bold tracking-tight text-white">
                 ATTICUS <span className="text-brand-blue">INTEGRITY</span>
