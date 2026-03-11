@@ -73,7 +73,13 @@ export function ContactPage() {
   }, [form]);
   const handleReset = () => {
     setIsSuccess(false);
-    form.reset();
+    form.reset({
+      name: '',
+      email: '',
+      phone: '',
+      service: 'general',
+      message: '',
+    });
   };
   return (
     <div className="bg-brand-cream min-h-[calc(100vh-10rem)] flex flex-col justify-center">
@@ -97,7 +103,7 @@ export function ContactPage() {
               </motion.div>
               <h1 className="text-4xl md:text-6xl font-display font-bold text-brand-green mb-8 tracking-tight">Directly Received</h1>
               <p className="text-brand-slate-light text-xl mb-12 leading-relaxed font-medium">
-                Thank you for reaching out. As the principal of Atticus Integrity, I personally review every inquiry to ensure provide the most effective advisory support. I will be in contact with you shortly to discuss your business requirements.
+                Thank you for reaching out. As the principal of Atticus Integrity, I personally review every inquiry to ensure I provide the most effective advisory support. I will be in contact with you shortly to discuss your business requirements.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
                 <Button asChild size="lg" className="bg-brand-green text-white px-12 h-16 border-none shadow-xl hover:bg-brand-green/90 hover:scale-[1.03] transition-all w-full sm:w-auto font-bold text-lg">
@@ -223,7 +229,7 @@ export function ContactPage() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel className="text-brand-green font-bold text-sm">Advisory Area</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger className="bg-brand-cream/40 border-brand-slate/10 h-14 text-base">
                                   <SelectValue placeholder="Select a service" />
