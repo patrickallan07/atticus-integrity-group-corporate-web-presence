@@ -7,38 +7,38 @@ import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 const services = [
   {
-    title: "Workplace Advisory",
-    description: "Strategic guidance on organizational structure, workforce planning, and change management initiatives.",
-    icon: Users
-  },
-  {
     title: "Employee Relations",
-    description: "Expert assistance with performance management, dispute resolution, and maintaining positive workplace cultures.",
+    description: "Expert counsel on performance management, dispute resolution, and building cohesive, high-trust workplace environments.",
     icon: Heart
   },
   {
     title: "HR Compliance",
-    description: "Ensuring business operations meet all Modern Award requirements, Fair Work Act standards, and safety regulations.",
+    description: "Ensuring organizational adherence to Modern Awards, the Fair Work Act, and all regulatory workplace standards.",
     icon: FileCheck
   },
   {
-    title: "Recruiting / Talent Acquisition",
-    description: "Full-cycle recruitment strategies, candidate sourcing, and onboarding to build elite teams.",
-    icon: Briefcase
-  },
-  {
-    title: "Leadership Coaching",
-    description: "Tailored development programs for executives and management to build high-performance organizations.",
+    title: "Leadership Counsel",
+    description: "Strategic advisory for executives and management teams on organizational design and effective leadership practices.",
     icon: GraduationCap
   },
   {
-    title: "Policy Development",
-    description: "Drafting comprehensive employment contracts, handbooks, and specialized workplace policies.",
+    title: "Workplace Advisory",
+    description: "Comprehensive guidance on organizational structure, change management, and workforce effectiveness initiatives.",
+    icon: Users
+  },
+  {
+    title: "Talent Strategy",
+    description: "Building sustainable pipelines through professional recruitment strategies and optimized onboarding experiences.",
+    icon: Briefcase
+  },
+  {
+    title: "Policy & Governance",
+    description: "Development of robust employment frameworks, including contracts, handbooks, and specialized workplace policies.",
     icon: Gavel
   },
   {
-    title: "Risk Mitigation",
-    description: "Auditing HR practices to identify potential legal vulnerabilities and implementing corrective actions.",
+    title: "Operational Risk",
+    description: "Strategic audits to identify people-related risks and implementation of preventative compliance measures.",
     icon: ShieldAlert
   }
 ];
@@ -47,18 +47,8 @@ export function HRServicesPage() {
   return (
     <CorporateLayout>
       <section className="relative bg-brand-cream/50 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
-        {/* Brand Watermark Background Elements - Consolidated Identity */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-          <img
-            src={logoUrl}
-            alt=""
-            className="absolute -top-12 -right-12 w-[500px] opacity-[0.03] rotate-12 grayscale"
-          />
-          <img
-            src={logoUrl}
-            alt=""
-            className="absolute -bottom-16 -left-12 w-[600px] opacity-[0.03] -rotate-12 grayscale"
-          />
+          <img src={logoUrl} alt="" className="absolute -top-12 -right-12 w-[500px] opacity-[0.03] rotate-12 grayscale" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -71,10 +61,10 @@ export function HRServicesPage() {
               Atticus Integrity <span className="text-brand-blue">HR</span>
             </h1>
             <p className="text-body max-w-2xl mb-8">
-              People are the greatest asset. Atticus Integrity helps you manage, protect, and empower your workforce through professional advisory services that blend empathy with legal precision.
+              We provide independent workplace advisory services focused on organizational effectiveness, culture, and compliance. Our approach ensures your people strategy aligns with your commercial objectives.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white hover:bg-brand-green/90 h-12 shadow-sm border-none">
-              <Link to="/contact">Get in Touch</Link>
+              <Link to="/contact">Discuss Your Needs</Link>
             </Button>
           </motion.div>
         </div>
@@ -106,17 +96,6 @@ export function HRServicesPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-      <section className="py-20 bg-gradient-signature text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Ready to Optimize Your Workplace?</h2>
-          <p className="text-brand-cream/80 mb-10 text-lg">
-            Expert guidance is available to help you navigate complex employee situations with confidence and integrity.
-          </p>
-          <Button asChild size="lg" className="bg-white text-brand-green hover:bg-brand-cream hover:scale-105 transition-transform h-14 px-10 font-bold border-none">
-            <Link to="/contact">Get in Touch</Link>
-          </Button>
         </div>
       </section>
     </CorporateLayout>
