@@ -38,7 +38,7 @@ const financialServices = [
   }
 ];
 export function FinancialServicesPage() {
-  const logoUrl = "https://placehold.co/600x200/F5F5F0/1F4A38/png?text=ATTICUS+INTEGRITY";
+  const logoUrl = `data:image/svg+xml,%3Csvg viewBox='0 0 12 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='4' rx='0.24' fill='%23F5F5F0'/%3E%3Ctext x='6' y='2.2' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='0.8' letter-spacing='0.01em' fill='%231F4A38'%3EATTICUS INTEGRITY%3C/text%3E%3C/svg%3E`; // Persistent SVG brand logo (light: hunter green on cream for watermarks)
   return (
     <CorporateLayout>
       <section className="relative bg-brand-slate/5 py-16 md:py-24 border-b border-brand-slate/10 overflow-hidden">
