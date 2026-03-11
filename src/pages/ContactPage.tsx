@@ -77,7 +77,7 @@ export function ContactPage() {
     form.reset();
   };
   return (
-    <div className="bg-brand-cream min-h-[calc(100vh-14rem)] flex flex-col justify-center">
+    <div className="bg-brand-cream min-h-[calc(100vh-10rem)] flex flex-col justify-center">
       <AnimatePresence mode="wait">
         {isSuccess ? (
           <motion.div
@@ -88,7 +88,7 @@ export function ContactPage() {
             className="flex-1 flex items-center justify-center py-20 md:py-32 bg-brand-cream"
           >
             <div className="max-w-xl mx-auto px-4 text-center">
-              <motion.div 
+              <motion.div
                 initial={{ rotate: -20, scale: 0 }}
                 animate={{ rotate: 0, scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
