@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Mail, Phone, Send, Loader2, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
 import { CorporateLayout } from '@/components/layout/CorporateLayout';
 import { Button } from '@/components/ui/button';
@@ -79,7 +80,7 @@ export function ContactPage() {
               Thank you for reaching out. I have received your information and will personally review the requirements to ensure the best possible advisory support. Expect a response shortly.
             </p>
             <Button asChild size="lg" className="bg-brand-green text-white px-8">
-              <a href="/">Return to Home</a>
+              <Link to="/">Return to Home</Link>
             </Button>
           </div>
         </div>
