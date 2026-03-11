@@ -17,12 +17,13 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-28 md:h-36 items-center relative">
-          <div className="flex items-center h-full relative">
+          {/* Logo Section with defined width to prevent layout shift */}
+          <div className="flex items-center h-full relative w-48 md:w-64">
             <Link
               to="/"
-              className="flex items-center transition-transform duration-500 hover:scale-[1.05] active:scale-95 z-20 absolute top-2 md:top-4"
+              className="flex items-center transition-transform duration-500 hover:scale-[1.05] active:scale-95 z-20 absolute top-3 md:top-6 left-0"
             >
-              <div className="h-32 md:h-44 aspect-[2/1] overflow-hidden rounded-sm bg-white shadow-xl border border-brand-slate/5 ring-4 ring-white/50">
+              <div className="h-32 md:h-44 aspect-[2/1] overflow-hidden rounded-sm bg-white shadow-xl border border-brand-slate/5 ring-4 ring-white/50 flex items-center justify-center">
                 <img
                   src={logoUrl}
                   alt="Atticus Integrity"
@@ -31,6 +32,7 @@ export function Navbar() {
               </div>
             </Link>
           </div>
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10 h-full">
             <div className="flex items-center space-x-8">
               {navLinks.map((link) => (
@@ -53,6 +55,7 @@ export function Navbar() {
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center h-full">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -64,6 +67,7 @@ export function Navbar() {
           </div>
         </div>
       </div>
+      {/* Mobile Navigation Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-300 absolute top-full left-0 w-full shadow-2xl z-[60] overflow-y-auto max-h-[calc(100vh-8rem)]">
           <div className="px-6 pt-12 pb-12 space-y-1">

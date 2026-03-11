@@ -97,7 +97,7 @@ export function ContactPage() {
               </motion.div>
               <h1 className="text-4xl md:text-6xl font-display font-bold text-brand-green mb-8 tracking-tight">Directly Received</h1>
               <p className="text-brand-slate-light text-xl mb-12 leading-relaxed font-medium">
-                Thank you for reaching out. As the principal of Atticus Integrity, I personally review every inquiry to ensure we provide the most effective advisory support. I will be in contact with you shortly to discuss your business requirements.
+                Thank you for reaching out. As the principal of Atticus Integrity, I personally review every inquiry to ensure provide the most effective advisory support. I will be in contact with you shortly to discuss your business requirements.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
                 <Button asChild size="lg" className="bg-brand-green text-white px-12 h-16 border-none shadow-xl hover:bg-brand-green/90 hover:scale-[1.03] transition-all w-full sm:w-auto font-bold text-lg">
@@ -136,7 +136,7 @@ export function ContactPage() {
                       <Phone size={28} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-brand-green mb-1 uppercase tracking-widest text-xs">Direct Line</h4>
+                      <h4 className="font-bold text-brand-green mb-1 uppercase tracking-widest text-[10px]">Direct Line</h4>
                       <p className="text-brand-slate-light text-2xl font-bold tracking-tight">1 (888) 757-3770</p>
                     </div>
                   </div>
@@ -145,8 +145,8 @@ export function ContactPage() {
                       <Mail size={28} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-brand-green mb-1 uppercase tracking-widest text-xs">Inquiry Email</h4>
-                      <p className="text-brand-slate-light text-2xl font-medium">info@atticusintegrity.com</p>
+                      <h4 className="font-bold text-brand-green mb-1 uppercase tracking-widest text-[10px]">Inquiry Email</h4>
+                      <p className="text-brand-slate-light text-2xl font-bold tracking-tight">info@atticusintegrity.com</p>
                     </div>
                   </div>
                 </div>
@@ -157,11 +157,11 @@ export function ContactPage() {
                   </h4>
                   <div className="space-y-4 text-sm">
                     <div className="flex justify-between items-center pb-3 border-b border-brand-slate/5">
-                      <span className="font-medium text-brand-slate-light">Monday - Friday</span>
+                      <span className="font-bold text-brand-slate-light">Monday - Friday</span>
                       <span className="text-brand-green font-bold">9:00 AM - 5:30 PM (CST)</span>
                     </div>
                     <div className="flex justify-between items-center italic">
-                      <span className="text-brand-slate/50">Saturday - Sunday</span>
+                      <span className="text-brand-slate/50 font-medium">Saturday - Sunday</span>
                       <span className="text-brand-blue font-bold">By Appointment Only</span>
                     </div>
                   </div>
@@ -248,7 +248,7 @@ export function ContactPage() {
                           <FormLabel className="text-brand-green font-bold text-sm">Brief Description of Needs</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Describe your current workplace or financial challenges..."
+                              placeholder="Describe current workplace or financial challenges..."
                               className="min-h-[180px] bg-brand-cream/40 border-brand-slate/10 focus-visible:ring-brand-blue resize-none text-base p-5 leading-relaxed"
                               {...field}
                             />
@@ -269,8 +269,8 @@ export function ContactPage() {
                       )}
                       {isSubmitting ? 'Sending Inquiry...' : 'Submit Inquiry'}
                     </Button>
-                    <p className="text-center text-xs text-brand-slate/50 mt-6 leading-relaxed">
-                      By submitting this inquiry, you agree to our privacy policy. Your information is treated with absolute integrity and is used solely for the purpose of professional advisory contact.
+                    <p className="text-center text-[10px] text-brand-slate/50 mt-6 leading-relaxed uppercase tracking-wider font-bold">
+                      By submitting this inquiry, you agree to the privacy policy. Information is treated with absolute integrity and is used solely for the purpose of professional advisory contact.
                     </p>
                   </form>
                 </Form>
