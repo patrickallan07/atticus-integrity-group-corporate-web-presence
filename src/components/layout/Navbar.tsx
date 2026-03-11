@@ -7,7 +7,6 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'HR Advisory', href: '/hr-advisory' },
   { name: 'Financial Services', href: '/financial-services' },
-  { name: 'Contact', href: '/contact' },
 ];
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
