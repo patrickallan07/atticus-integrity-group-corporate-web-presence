@@ -110,7 +110,7 @@ export function AboutPage() {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-white leading-tight">
-              Where Integrity Guides <br className="hidden md:block" /> Every Strategic Decision
+              Where Integrity Guides <br className="hidden md:block" /> Every Decision
             </h2>
             <div className="max-w-2xl mx-auto text-brand-cream/80 leading-relaxed text-lg font-medium">
               <p>
