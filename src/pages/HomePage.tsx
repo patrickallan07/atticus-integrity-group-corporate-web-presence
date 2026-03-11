@@ -24,7 +24,7 @@ export function HomePage() {
               <ShieldCheck size={14} className="text-brand-blue" />
               Independent Professional Advisory
             </div>
-            <h1 className="text-display mb-8">
+            <h1 className="text-display mb-6 md:mb-8">
               Greater Levels of <span className="text-brand-blue">Effectiveness & Culture</span>
             </h1>
             <p className="text-body max-w-2xl mb-10">
@@ -44,7 +44,7 @@ export function HomePage() {
       <section id="divisions" className="py-24 bg-white border-y border-brand-slate/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-green mb-4">Practice Areas</h2>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-green mb-4">Practice Areas</h2>
             <div className="h-1.5 w-20 bg-brand-blue mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">

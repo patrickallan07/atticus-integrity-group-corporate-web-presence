@@ -16,13 +16,13 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-slate/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-40 items-center">
+        <div className="flex justify-between h-28 md:h-40 items-center transition-all duration-300">
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-opacity hover:opacity-90">
               <img
                 src={logoUrl}
                 alt="Atticus Integrity"
-                className="h-32 w-auto"
+                className="h-20 md:h-32 w-auto transition-all duration-300"
               />
             </Link>
           </div>
@@ -49,7 +49,7 @@ export function Navbar() {
               className="text-brand-green hover:text-brand-blue transition-colors p-2"
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X size={32} /> : <Menu size={32} />}
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -57,7 +57,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-brand-slate/10 animate-in slide-in-from-top duration-300">
-          <div className="px-4 pt-2 pb-6 space-y-2">
+          <div className="px-4 pt-2 pb-6 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -66,7 +66,7 @@ export function Navbar() {
                 className={cn(
                   "flex items-center justify-between px-3 py-4 rounded-md text-base font-medium transition-colors",
                   location.pathname === link.href
-                    ? "bg-brand-green/10 text-brand-blue"
+                    ? "bg-brand-green/5 text-brand-blue"
                     : "text-brand-slate hover:bg-brand-green/5 hover:text-brand-green"
                 )}
               >
