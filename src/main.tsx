@@ -70,7 +70,7 @@ createRoot(container).render(
           closeButton
           theme="light"
           toastOptions={{
-            style: { 
+            style: {
               border: '1px solid #3341551A',
               backgroundColor: '#F5F5F0',
               color: '#1F4A38',
