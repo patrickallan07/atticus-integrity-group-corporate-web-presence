@@ -23,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { api } from '@/lib/api-client';
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
@@ -45,14 +46,18 @@ export function ContactPage() {
   const onSubmit = useCallback(async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      console.log('Form submission:', values);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await api("/api/contact", { 
+        method: "POST", 
+        body: JSON.stringify(values) 
+      });
       toast.success('Message Sent Successfully', {
         description: "We have received your inquiry and will be in touch shortly.",
       });
       form.reset();
     } catch (error) {
-      toast.error('Failed to send message');
+      toast.error('Failed to send message', {
+        description: error instanceof Error ? error.message : 'An unexpected error occurred.'
+      });
       console.error('Contact error:', error);
     } finally {
       setIsSubmitting(false);
